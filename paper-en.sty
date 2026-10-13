@@ -1,0 +1,212 @@
+\usepackage{amsmath,amssymb,amsthm,pifont}
+\usepackage{bm}%makes better bold fornt in math
+\usepackage{manfnt}
+\usepackage{enumerate}
+\usepackage{epsfig,lpic,wrapfig}
+\usepackage{alphabeta}
+%\usepackage{fixltx2e}%provides \textsubscript
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{braids}
+%\setcounter{tocdepth}{4}
+
+
+\usepackage{extarrows}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,
+%slovak,
+german,
+%greek,
+%french,
+english]{babel}
+
+\usepackage{url}
+\usepackage[
+sorting=nyt,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+%\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{library.bib}
+
+
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
+%removes p. in the cites
+
+\usepackage{accsupp}
+\usepackage{soul}
+\sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
+
+\newcommand\ann[1]{%
+    \BeginAccSupp{method=escape,ActualText={\detokenize{#1}}}%
+      \an{#1}%
+    \EndAccSupp{}%
+}
+
+\def\emph{\ann}
+
+\renewcommand{\thesubsection}{\thesection\Alph{subsection}}
+
+\newcounter{thm}[section]
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thesection.\arabic{thm}. #2.#1}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+\newcounter{thmA}
+\renewcommand{\thethmA}{\Alph{thmA}}
+\newcommand\claimA[2][{}]{\par\medskip\noindent\refstepcounter{thmA}\hbox{\bf #2 \Alph{thmA}.#1}
+\it\ %\ignorespaces
+}
+\def\endclaimA{
+\par\medskip}
+\newenvironment{thmA}{\claimA}{\endclaimA}
+
+\def\Ball{\mathrm{B}}
+\def\Bis{\mathrm{Mir}}
+\def\Cl{\mathrm{Cl}}
+\def\Fix{\mathrm{Fix}\,}
+\def\Int{\mathrm{Int}}
+\def\Sph{\mathrm{S}}
+
+\def\diam{\mathop{\rm diam}\nolimits}
+\def\length{\mathop{\rm length}\nolimits}
+
+\def\II{\mathbb{I}}
+\def\JJ{\mathbb{J}}
+\def\RR{\mathbb{R}}
+\def\S{\mathbb{S}}
+\def\TT{\mathbb{T}}
+\def\OO{\mathrm{O}}
+\def\ZZ{\mathbb{Z}}
+
+\usepackage{stmaryrd}
+\def\vv{\llbracket}
+\def\ww{\rrbracket}
+
+\def\eps{\varepsilon}
+
+
+\newcommand*{\set}[2]{\left\{\,{#1}\,:\,{#2}\,\right\}}
+\def\id{\mathrm{id}}
+\def\df{\mathrel{{:}{=}}}
+\def\parit#1{\medskip\noindent{\it #1}}
+\def\parbf#1{\medskip\noindent{\bf #1}}
+\def\qeds{\qed\par\medskip}
+\def\qedsf{%
+  \par\nobreak
+  \vskip-\belowdisplayskip
+  \vskip-.7\baselineskip
+  \hbox to\linewidth{\hfill\raisebox{-.15em}{\qedsymbol}}%
+  \vskip.1\baselineskip
+  \vskip\medskipamount}
+\renewcommand*\vec[1]{\text{\sc{#1}}}
+\def\emptyset{\varnothing}
+
+%\usepackage{chngcntr}
+%\counterwithout{paragraph}{section}
+%\renewcommand{\theparagraph}{\arabic{paragraph}}
+%\setcounter{secnumdepth}{4}
+%\usepackage{titlesec}
+%\titleformat{\paragraph}[runin]{\normalfont\bfseries}{\theparagraph.}{\wordsep}{}
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+
+
+%NUMBERONCIRC
+\newcommand*{\numform}[1]{\@numform{\@nameuse{c@#1}}}
+\newcommand*{\@numform}[1]%
+{\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\else\@ctrerr \fi}
+%EQNUMBER
+\newcounter{eqtn}
+\renewcommand{\@eqnnum}{\theeqtn}
+\renewcommand{\theeqtn}{\numform{eqtn}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
+
+%CLAIM
+\def\clmclaim#1{\par\medskip\noindent\refstepcounter{eqtn}\hbox{\rm\numform{eqtn} #1}
+\it%\ignorespaces
+}
+\def\endclmclaim{\par
+\medskip}
+\newenvironment{clm}{\clmclaim}{\endclmclaim}
+
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+
+%SUBTHEOREM 
+\newcounter{subthm}[thm]
+\renewcommand{\thesubthm}{\thethm\textit{\hskip-0.03em \roman{subthm}}}
+\newcounter{clone}[thm]
+\renewcommand{\theclone}{\textit{(\roman{subthm})}}
+\newenvironment{subthm}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthm}\begin{itemize}\item[(\roman{subthm})]}{\par\refstepcounter{subthm}\label{#1}\setcounter{clone}{\value{subthm}} \addtocounter{clone}{-1}\refstepcounter{clone}\label{SHORT.#1}\begin{itemize}
+\item [(\roman{subthm})]}}{\end{itemize}}
+
+%SUBTHEOREM A
+\newcounter{subthmA}[thm]
+\renewcommand{\thesubthmA}{\thethm\textit{\hskip-0.05em \\Roman{subthmA}}}
+\newcounter{cloneA}[thm]
+\renewcommand{\thecloneA}{\textit{(\\Roman{subthmA})}}
+\newenvironment{subthmA}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmA}\begin{itemize}\item[(\\Roman{subthmA})]}{\par\refstepcounter{subthmA}\label{#1}\setcounter{cloneA}{\value{subthmA}} \addtocounter{cloneA}{-1}\refstepcounter{cloneA}\label{SHORT.#1}\begin{itemize}
+\item [(\\Roman{subthmA})]}}{\end{itemize}}
+%SUBTHEOREM 1
+\newcounter{subthmN}[thm]
+\renewcommand{\thesubthmN}{\thethm-\arabic{subthmN}}
+\newcounter{cloneN}[thm]
+\renewcommand{\thecloneN}{\arabic{subthmN}}
+\newenvironment{subthmN}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmN}\begin{itemize}\item[\arabic{subthmN})]}{\par\refstepcounter{subthmN}\label{#1}\setcounter{cloneN}{\value{subthmN}} \addtocounter{cloneN}{-1}\refstepcounter{cloneN}\label{SHORT.#1}\begin{itemize}
+\item [\arabic{subthmN})]}}{\end{itemize}}
+
+
+\makeatletter
+\newcommand\xhookrightarrow[2][]{%
+  \ext@arrow 9999{\longhookrightarrowfill@}{#1}{#2}}
+\newcommand\longhookrightarrowfill@{%
+  \arrowfill@\hook\relbar\rightarrow}
+\makeatother
+
+\hyphenation{
+Kapo-vitch
+Pol-te-ro-vich
+Ury-sohn
+Dmi-tri
+}
