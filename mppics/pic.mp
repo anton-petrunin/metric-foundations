@@ -5,11 +5,11 @@ input mparrows
 verbatimtex
 %&latex
 \documentclass[a4paper,10pt]{article}
-\usepackage{../paper-plus-en}
+\usepackage{../paper-en}
 \begin{document}
 etex
 
-filenametemplate "%j-%1c.eps";
+filenametemplate "%j-%1c.mps";
 prologues:=3;
 setarrows(barbedsharp);
 linecap:=butt;

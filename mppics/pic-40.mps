@@ -2,12 +2,12 @@
 %%BoundingBox: -9 -90 249 65 
 %%HiResBoundingBox: -8.0713 -89.01811 248.91666 64.78526 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2026.09.28:2125
+%%CreationDate: 2026.10.13:1945
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font SHOUGC-CMMI10 LNIJCJ-CMR7 TOCEMT-CMSY7 SHVXZD-CMMI7 UCMXAH-SFRM1000
+%%+ font SHOUGC-CMMI10 LNIJCJ-CMR7 TOCEMT-CMSY7 SHVXZD-CMMI7 WPPHAF-SFRM1000
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font SHOUGC-CMMI10 LNIJCJ-CMR7 TOCEMT-CMSY7 SHVXZD-CMMI7 UCMXAH-SFRM1000
+%%+ font SHOUGC-CMMI10 LNIJCJ-CMR7 TOCEMT-CMSY7 SHVXZD-CMMI7 WPPHAF-SFRM1000
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -1022,7 +1022,7 @@ A14C12461D4E639B035CA5E22D084547BF8F03D5FF5AD068447AB63CEB7E0012
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font UCMXAH-SFRM1000
+%%BeginResource: font WPPHAF-SFRM1000
 %!FontType1-1.0: SFRM1000 0.3
 %%CreationDate: Wed Sep 12 2001
 % Copyright (c) 2001 Vladimir Volovich <vvv@vsu.ru>.
@@ -1038,7 +1038,7 @@ cleartomark
 /isFixedPitch false def
 /Weight (Medium) def
 end readonly def
-/FontName /UCMXAH-SFRM1000 def
+/FontName /WPPHAF-SFRM1000 def
 /Encoding 256 array
 0 1 255 {1 index exch /.notdef put} for
 dup 46 /period put
@@ -1302,7 +1302,7 @@ cleartomark
  /cmr7 /DRMNLU-CMR7 def
  /cmsy7 /TOCEMT-CMSY7 def
  /cmmi7 /SHVXZD-CMMI7 def
- /ecrm1000 /UCMXAH-SFRM1000 def
+ /larm1000 /WPPHAF-SFRM1000 def
 %%EndSetup
 %%Page: 1 1
  0 0 0 setrgbcolor 0 0.5 dtransform truncate idtransform setlinewidth pop
@@ -1581,11 +1581,11 @@ newpath 120.55458 -27.77928 moveto
 160.83943 -6.3895 moveto
 (w) cmmi10 9.96265 fshow
 117.67123 17.36018 moveto
-(.) ecrm1000 9.96265 fshow
+(.) larm1000 9.96265 fshow
 117.67123 13.3752 moveto
-(.) ecrm1000 9.96265 fshow
+(.) larm1000 9.96265 fshow
 117.67123 9.39009 moveto
-(.) ecrm1000 9.96265 fshow
+(.) larm1000 9.96265 fshow
 117.29155 -16.65782 moveto
 (\023) cmmi10 9.96265 fshow
 168.29723 24.03442 moveto
