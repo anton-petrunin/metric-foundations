@@ -764,6 +764,12 @@ By \ref{lem:bisector}, $M\setminus A$ is path-connected.
 Indeed, both path-connected components of $M\setminus \Bis_\rho$ intersect both path-connected components of $M\setminus \Bis_\sigma$.
 Thus we can choose a rectifiable path $\alpha_1$ in $M\setminus A$ from $\Bis_\rho$ to $\Bis_{\sigma}$.
 
+\begin{figure}[b!]
+\centering\vskip-0mm
+\includegraphics{mppics/pic-90}
+\vskip-0mm
+\end{figure}
+
 Moreover, given $o\in A$ we can assume that $\alpha_1$ lies arbitrarily close to $o$.
 Indeed, choose a point $x\notin \Bis_\rho\cup \Bis_{\sigma}$ sufficiently close to $o$.
 Connect $\rho(x)$ to $x$ and $x$ to $\sigma(x)$ by almost shortest paths;
@@ -1011,12 +1017,13 @@ Consider the set $\Lambda_{a,c}$ of all $\lambda\geqslant 0$
 such that $a=|u-v|$, $c=|u-w|$, and $b+\lambda=|v-w|$ for some points $u,v,w\in M$;
 further assume $\Lambda_{a,c}\ne\varnothing$.
 
-For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
-\begin{figure}[ht!]
+\begin{figure}[bt!]
 \centering\vskip-0mm
 \includegraphics{mppics/pic-70}
 \vskip-0mm
 \end{figure}
+
+For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
 but there are also two other distances $\theta(\lambda,\mu)$ and $\Theta(\lambda,\mu)$ defined as the greatest lower bounds of the values $\ell$ and $L$ for configurations of points shown in the picture.
 Formally, they are defined as
 \begin{align*}
@@ -1261,17 +1268,23 @@ Then $M$ admits $n+1$ distinct pairwise commuting reflections.
 \parit{Proof.}
 Let $\sigma$ be the reflection swapping $x$ with $y$.
 Note that $\sigma$ commutes with $\rho_2,\ldots,\rho_n$.
-If it also commutes with $\rho_1$, then we can add $\sigma$ to the family.
 
-Otherwise put $u=\sigma\circ\rho_1(x)$, and $v=\rho_1(y)$.
-If $u=v$, then $\sigma$ swaps $\rho_1(x)$ with $\rho_1(y)$ so uniqueness gives $\rho_1\circ\sigma\circ\rho_1=\sigma$ --- a contradiction.
+\begin{wrapfigure}{o}{30mm}
+\centering
+\vskip-4mm
+\includegraphics{mppics/pic-100}
+\vskip-0mm
+\end{wrapfigure}
 
-Thus $u\ne v$; let $\tau$ be the reflection swapping $u$ with $v$.
+Set $u=\rho_1(x)$, $v=\rho_1(y)$, and $w=\sigma(u)$.
+Note that $\rho_1$ commutes with $\sigma$ if and only if $v=w$;
+in this case we can add $\sigma$ to the family, obtaining $n+1$ commuting reflections.
+
+Thus we can assume that $v\ne w$; let $\tau$ be the reflection swapping $v$ with $w$.
 The equality of the distances to $H_1$ gives $x,y\in\Bis(u,v)$.
-Hence the reflection $\tau$ fixes $x,y$ and therefore commutes with $\sigma$.
-Each $\rho_i$, $i\ge2$, fixes $u,v$, so it also commutes with $\tau$.
-Consequently, forgetting $\rho_1$, we obtain the distinct
-pairwise commuting reflections
+Hence the reflection $\tau$ fixes $x,y$ and commutes with $\sigma$.
+Each $\rho_i$, $i\ge2$, fixes $v$ and $w$; so it also commutes with $\tau$.
+Thus, discarding $\rho_1$, we obtain $n+1$ commuting reflections
 $\sigma$, $\tau$, $\rho_2,\ldots,\rho_n$.
 \qeds
 

@@ -377,4 +377,120 @@ label.lft (btex $\gamma$ etex, point 1.45 of p1);
 label.urt (btex $\S(u,c')$ etex, z.ww rotated -20);
 label.urt (btex $\S(u,a)$ etex, (0,-2)+z.z rotated -15);
 endfig;
+
+beginfig(90)
+
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.pp=(1,0)*u rotated 55;
+
+p1=(-1.1,0)*u--(8,0)*u;
+p2=(4,0)*u{(2,1)}..z.pp{z.pp rotated 90}..{(-1,3)}(0,2.5)*u;
+p3 =p2  rotated -90 yscaled -1 cutbefore (p1 rotated 45);
+p4 =p3  rotated -45 yscaled -1 cutafter (p1 rotated 45/2);
+
+draw p4 rotated 90 withcolor .33;
+draw p4 rotated 135 withcolor .33;
+draw p4 rotated 180 withcolor .33;
+draw p4 rotated -135 withcolor .33;
+draw p4 rotated -90 withcolor .33;
+draw p4 rotated -45 withcolor .33;
+draw p4 yscaled -1 rotated 0 withcolor .33;
+draw p4 yscaled -1 rotated 90 withcolor .33;
+draw p4 yscaled -1 rotated 135 withcolor .33;
+draw p4 yscaled -1 rotated 180 withcolor .33;
+draw p4 yscaled -1 rotated -135 withcolor .33;
+draw p4 yscaled -1 rotated -90 withcolor .33;
+draw p4 yscaled -1 rotated -45 withcolor .33;
+
+for i=10 step -1 until 1:
+draw p1 rotated (180/(2**i)) withcolor (1+1/(1.1**10)-1/(1.1**i));
+endfor
+
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw circle(origin,z.pp) dashed evenly;
+draw p4 rotated 45 penbold;
+
+
+clip currentpicture to (-1.1,-1.1)*u--(-1.1,3)*u--(5,3)*u--(5,-1.1)*u--cycle;
+
+dOt origin;
+
+z.rho=(4.5,0)*u;
+z.p3=point 0 of p4 rotated 45;
+z.b=(0,1)*u rotated 45;
+
+dOt z.pp, z.p3;
+
+label.ulft (btex $\beta_3$ etex,z.b) withcolor .33;
+label.lrt (btex $\beta_\infty$ etex,z.b);
+label.lrt (btex $o$ etex,origin);
+label.urt (btex $\tilde\alpha_3$ etex, z.pp);
+whitelabel.lft (btex $p_\infty$ etex, z.pp+(4,-2));
+whitelabel.rt (btex $p_3$ etex, z.p3);
+label.bot (btex $\Bis_\rho$ etex,z.rho);
+label (btex $\Bis_\sigma=\Bis_{\tau_1}$ etex rotated 90, .5*z.rho rotated 90 +(-6,0));
+label (btex $\Bis_{\tau_2}$ etex rotated 45, .8*z.rho rotated 45 +(-4,4));
+label (btex $\Bis_{\tau_3}$ etex rotated (45/2), 1*z.rho rotated (45/2) +(-3,5));
+label (btex $\Bis_{\tau_4}$ etex rotated (45/4), 1*z.rho rotated (45/4) +(-3,5));
+label.urt (btex $\alpha_1$ etex, point .7 of p2);
+label.urt (btex $\alpha_2$ etex, point 1.4 of p3);
+label.urt (btex $\alpha_3$ etex, point 0 of p4);
+
+endfig;
+
+beginfig(100)
+
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.x=(0,0)*u;
+z.y=(1,0)*u;
+z.u=(0,-1.4)*u;
+z.v=(1,-1.2)*u;
+z.w=(.8,-1.4)*u;
+
+p1= z.x{(1,.1)}..{(1,-.1)}z.y;
+p2=z.u{(1,.5)}..{(1,0)}z.v;
+p3=z.u{(1,-.9)}..{(1,.9)}z.w;
+
+p11=z.x{(-.1,-1)}..{(.1,-1)}z.u;
+p12=z.y{(.8,-1)}..{(-.8,-1)}z.v;
+p13=z.y{(-.2,-1)}..{(0,-1)}z.w;
+
+p21= z.x{(1,-.6)}..z.v;
+p22=z.x{(.2,-1)}..z.w;
+p23=z.u{(1,.8)}..{(.4,1)}z.y;
+
+draw p1;
+draw p2;
+draw p3;
+
+draw p11;
+draw p12;
+draw p13;
+
+draw p21;
+draw p22;
+draw p23;
+
+rimmark(p1,p2,p3);
+rimmark2(p11,p12,p13);
+rimmark3(p21,p22,p23);
+
+dOt z.x,z.y,z.u,z.v,z.w;
+
+label.ulft (btex $x$ etex, z.x);
+label.urt (btex $x$ etex, z.y);
+label.llft (btex $u$ etex, z.u);
+label.lrt (btex $v$ etex, z.v);
+label.lrt (btex $w$ etex, z.w);
+endfig;
+
 end
