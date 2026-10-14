@@ -760,9 +760,9 @@ Finally, we show that $\beta_\infty$ lies in $M$; thus it gives the required rec
 \parit{Path between mirrors.}
 By \ref{lem:bisector}, $M\setminus A$ is path-connected.
 Indeed, both path-connected components of $M\setminus \Bis_\rho$ intersect both path-connected components of $M\setminus \Bis_\sigma$.
-Thus we can choose a rectifiable path $\alpha_0$ in $M\setminus A$ from $\Bis_\rho$ to $\Bis_{\sigma}$.
+Thus we can choose a rectifiable path $\alpha_1$ in $M\setminus A$ from $\Bis_\rho$ to $\Bis_{\sigma}$.
 
-Moreover, given $o\in A$ we can assume that $\alpha_0$ lies arbitrarily close to $o$.
+Moreover, given $o\in A$ we can assume that $\alpha_1$ lies arbitrarily close to $o$.
 Indeed, choose a point $x\notin \Bis_\rho\cup \Bis_{\sigma}$ sufficiently close to $o$.
 Connect $\rho(x)$ to $x$ and $x$ to $\sigma(x)$ by almost shortest paths;
 note that they cross $\Bis_\rho$ and $\Bis_{\sigma}$ and do not intersect $\Bis_{\sigma}$ and $\Bis_\rho$, respectively.
@@ -770,7 +770,7 @@ Thus the concatenation of these two paths lies in $M\setminus A$ and contains po
 By the triangle inequality the path lies in a small neighborhood of $o$.
 
 \parit{Dyadic action.}
-Let us recursively construct a sequence of reflections $\sigma=\tau_0$, $\tau_1,\ldots$ and paths $\alpha_0$, $\alpha_1,\ldots$ in $M\setminus A$
+Let us recursively construct a sequence of reflections $\sigma=\tau_1$, $\tau_2,\ldots$ and paths $\alpha_1$, $\alpha_2,\ldots$ in $M\setminus A$
 such that $\alpha_n$ runs from $\Bis_\rho$ to $\Bis_{\tau_n}$,
 \[(\tau_{n+1}\circ\rho)^2=\tau_n\circ\rho
 \quad\text{and}\quad
@@ -788,7 +788,7 @@ By induction, we have
 \[\Fix \theta_n=\Bis_{\tau_n}\cap \Bis_\rho=A
 \eqlbl{eq:Fix=A}\]
 for every $n$.
-Indeed, the base case $n=0$ is trivial; suppose \ref{eq:Fix=A} holds for $n$.
+Indeed, the base case $n=1$ is trivial; suppose \ref{eq:Fix=A} holds for $n$.
 Since $\theta_{n+1}^2=\theta_n$, we have $\Fix \theta_{n+1}\subset \Fix \theta_n$.
 Since $\tau_{n+1}$ fixes each point in $A$, we have the opposite inclusion.
 Since
@@ -798,19 +798,19 @@ we get \ref{eq:Fix=A} for $n+1$.
 Now choose a shortest subarc of $\alpha_n$ that runs from $\Bis_\rho$ to $\Bis_{\tau_{n+1}}$ or from $\Bis_{\tau_{n+1}}$ to $\Bis_{\tau_n}$;
 reflect it by $\tau_{n+1}$ if necessary, so it runs from $\Bis_\rho$ to $\Bis_{\tau_{n+1}}$ and denote the resulting path by $\alpha_{n+1}$.
 
-The isometries $\rho$ and $\tau_n$ generate the dihedral  group $D_{2^{n+1}}$.
+The isometries $\rho$ and $\tau_n$ generate the dihedral  group $D_{2^{n}}$.
 It mimics reflections and rotations with the axis $A$;
-the isometry $\theta_n$ corresponds to a rotation by angle $\pi/2^n$;
-so it has order $2^{n+1}$.
+the isometry $\theta_n$ corresponds to a rotation by angle $\pi/2^{n-1}$;
+so it has order $2^n$.
 The isometries $\rho$ and $\tau_n$ for all $n$ generate $D_{\mathrm{dyad}}$, which is the union of the nested sequence of subgroups $D_2<D_4<\dots$;
 the group $D_{\mathrm{dyad}}$ is naturally isomorphic to a subgroup of $\OO(2)$.
-If $\theta_n^k\ne \id_M$, then one of its powers is $\theta_0$; therefore,  $\theta_n^k$ fixes precisely $A$.
+If $\theta_n^k\ne \id_M$, then one of its powers is $\theta_1$; therefore, $\theta_n^k$ fixes precisely $A$.
 Furthermore the mirrors of any two distinct reflections in $D_{\mathrm{dyad}}$ intersect precisely at~$A$.
 
 \parit{Spherical curve in $\bar M$.}
-The arc $\alpha_n$ has $2^{n+2}$ copies obtained by applying $\rho$, $\tau_n$, and their compositions.
-The resulting closed curves $\beta_n$ have $D_{2^{n+1}}$-symmetry and uniformly bounded lengths;
-we will assume that $\beta_n$ comes with a $D_{2^{n+1}}$-symmetric parametrization by $\S^1=\RR/\ZZ$ starting at $\Bis_\rho$ with Lipschitz constant $4\,\cdot\length\alpha_0$.
+The arc $\alpha_n$ has $2^{n+1}$ copies obtained by applying $\rho$, $\tau_n$, and their compositions.
+The resulting closed curves $\beta_n$ have $D_{2^{n}}$-symmetry and uniformly bounded lengths;
+we will assume that $\beta_n$ comes with a $D_{2^{n}}$-symmetric parametrization by $\S^1=\RR/\ZZ$ starting at $\Bis_\rho$ with Lipschitz constant $4\,\cdot\length\alpha_1$.
 
 
 
@@ -821,40 +821,40 @@ Hence $\beta_n$ converge to a curve $\beta_\infty$ in $\bar M$;
 the limit parametrization respects the $D_{\mathrm{dyad}}$-action.
 
 \parit{Limit action.}
-Denote by $\tilde\alpha_n$ the subarc of $\alpha_0$ that corresponds to $\alpha_n$ after unfolding it back to $\alpha_0$.
+Denote by $\tilde\alpha_n$ the subarc of $\alpha_1$ that corresponds to $\alpha_n$ after unfolding it back to $\alpha_1$.
 Let $p_n$ be the endpoint of $\tilde\alpha_n$ that corresponds to the endpoint of $\alpha_n$ on $\Bis_\rho$.
-Then $p_n\to p_\infty\in\alpha_0\subset M\setminus A$.
+Then $p_n\to p_\infty\in\alpha_1\subset M\setminus A$.
 Let $\rho_n$ be the corresponding conjugate of $\rho$; so, $\rho_n(p_n)=p_n$.
 
 Note that $p_\infty$ lies in $\beta_\infty$ and hence the whole $D_{\mathrm{dyad}}$-orbit of $p_\infty$ lies on $\beta_\infty$.
 
-The reflection $\rho_n$ has its partner reflection $\sigma_n=\theta_0\circ \rho_n$; it swaps $p_n$ with $\theta_0(p_n)$.
-Let $\sigma_\infty$ be the reflection swapping $p_\infty$ and $\theta_0(p_\infty)$.
+The reflection $\rho_n$ has its partner reflection $\sigma_n=\theta_1\circ \rho_n$; it swaps $p_n$ with $\theta_1(p_n)$.
+Let $\sigma_\infty$ be the reflection swapping $p_\infty$ and $\theta_1(p_\infty)$.
 By \ref{lem:cont-on-mirror}, we have
 \[
 z\in\Bis_{\sigma_\infty}
 \quad\Rightarrow\quad
-\rho_n(z)\to \theta_0(z).
+\rho_n(z)\to \theta_1(z).
 \]
 
-A path from $p_\infty$ to $\theta_0(p_\infty)$ in $M\setminus A$
+A path from $p_\infty$ to $\theta_1(p_\infty)$ in $M\setminus A$
 gives a point $q_\infty\in\Bis_{\sigma_\infty}\setminus A$.
 By \ref{lem:cont-on-mirror} and \ref{lem:reflection}, we can choose $q_n\in\Bis_{\sigma_n}$ such that $q_n\to q_\infty$.
-Note that $\rho_n(q_n)=\theta_0(q_n)$ for all large $n$.
+Note that $\rho_n(q_n)=\theta_1(q_n)$ for all large $n$.
 
-Let $\rho_\infty$ be the reflection swapping $q_\infty$ with $\theta_0(q_\infty)$.
+Let $\rho_\infty$ be the reflection swapping $q_\infty$ with $\theta_1(q_\infty)$.
 By \ref{lem:cont-on-mirror}, $\rho_n(z)\to z$ for every $z\in\Bis_{\rho_\infty}$.
 Together with the convergence on $\Bis_{\sigma_\infty}$, this implies
 \[
 |z-w|
 =\lim_{n\to\infty}|\rho_n(z)-\rho_n(w)|
-=|z-\theta_0(w)|
+=|z-\theta_1(w)|
 \]
 for $z\in\Bis_{\rho_\infty}$ and $w\in\Bis_{\sigma_\infty}$.
-Consequently, if $w\in\Bis_{\sigma_\infty}\setminus A$, then $\Bis_{\rho_\infty}\subset\Bis(w,\theta_0(w))$.
+Consequently, if $w\in\Bis_{\sigma_\infty}\setminus A$, then $\Bis_{\rho_\infty}\subset\Bis(w,\theta_1(w))$.
 By \ref{lem:rigidity}, these mirrors coincide and hence
-\[\rho_\infty=\theta_0\circ\sigma_\infty;\]
-in particular, $\theta_0\circ\sigma_\infty$ is a reflection.
+\[\rho_\infty=\theta_1\circ\sigma_\infty;\]
+in particular, $\theta_1\circ\sigma_\infty$ is a reflection.
 
 We claim that
 \[
@@ -882,7 +882,7 @@ Therefore $\rho_\infty\circ\theta_m$ and
 $\theta_m^{-1}\circ\rho_\infty$ agree on $\Bis_{\rho_\infty}$ and $\Bis_{\sigma_\infty}$.
 Another application of \ref{lem:rigidity} proves \ref{eq:rhothetarhotheta}.
 
-For every $m\geqslant0$ and $k\in\ZZ$, we have
+For every $m\geqslant1$ and $k\in\ZZ$, we have
 \[
 \theta_m^k\circ\rho_\infty
 =
@@ -890,14 +890,14 @@ For every $m\geqslant0$ and $k\in\ZZ$, we have
 \]
 so $\theta_m^k\circ\rho_\infty$ is conjugate to $\rho_\infty$;
 in particular, $\theta_m^k\circ\rho_\infty$ is a reflection.
-The partner reflection $\sigma_\infty=\theta_0\circ\rho_\infty$ belongs to the same family.
+The partner reflection $\sigma_\infty=\theta_1\circ\rho_\infty$ belongs to the same family.
 
 Let us reparametrize $\beta_\infty$ starting from $p_\infty$;
 so
 \[
 \beta_\infty(0)=p_\infty,
 \quad
-\beta_\infty(s+\tfrac1{2^{m+1}})=\theta_m\circ\beta_\infty(s),
+\beta_\infty(s+\tfrac1{2^{m}})=\theta_m\circ\beta_\infty(s),
 \quad\text{and}\quad
 \beta_\infty(-s)=\rho_\infty\circ\beta_\infty(s).
 \]
@@ -910,22 +910,22 @@ $\theta_m^k\circ\rho_\infty$; so $\eta_j\circ\beta_\infty(s)=\beta_\infty(t_j-s)
 Let us show that $\beta_\infty(t)\in M$.
 
 Choose a rectifiable path $\gamma$ from $p_\infty$
-to $\theta_0(p_\infty)$ in $M\setminus A$.
-Since $\theta_0$ interchanges the sides of every
+to $\theta_1(p_\infty)$ in $M\setminus A$.
+Since $\theta_1$ interchanges the sides of every
 $\Bis_{\eta_j}$, we can choose
 $y_j\in\gamma\cap\Bis_{\eta_j}$.
 After passing to a subsequence,
 $y_j\to y\in\gamma\subset M\setminus A$.
 
 Let us apply the preceding construction of a limiting pair
-of reflections to $\eta_j$ and $\theta_0\circ\eta_j$.
+of reflections to $\eta_j$ and $\theta_1\circ\eta_j$.
 It gives a reflection $\eta$ such that $\eta_j(z)\to\eta(z)$
 for every $z\in\Bis_\eta$, and $\eta\circ\theta_m=\theta_m^{-1}\circ\eta$ for every $m$.
-Moreover, $\theta_0\circ\eta$ is a reflection.
+Moreover, $\theta_1\circ\eta$ is a reflection.
 
 The mirror $\Bis_\eta$ meets every closed curve $\beta_n$:
-indeed, $\beta_n$ is $\theta_0$-invariant,
-and $\theta_0$ interchanges the sides of $\Bis_\eta$.
+indeed, $\beta_n$ is $\theta_1$-invariant,
+and $\theta_1$ interchanges the sides of $\Bis_\eta$.
 Choose $z_n\in\beta_n\cap\Bis_\eta$.
 Since $\beta_n$ converge to the closed curve $\beta_\infty$, a subsequence of $z_n$ converges to some $\xi\in \beta_\infty\cap\Cl_{\bar M}\Bis_\eta$;
 here $\Cl_{\bar M}$ denotes closure in $\bar M$.
@@ -942,7 +942,7 @@ and the right-hand side can be made arbitrarily small.
 
 Choose $s$ such that $\xi=\beta_\infty(s)$.
 Since $\eta_j(\xi)\to\xi$, we have $\beta_\infty(t-s)=\xi$.
-For every dyadic $d=\tfrac k{2^{n+1}}$, let $\Theta_d=\theta_n^k$.
+For every dyadic $d=\tfrac k{2^n}$, let $\Theta_d=\theta_n^k$.
 Then
 \[
 \eta\circ\beta_\infty(s+d)
@@ -959,9 +959,9 @@ If $s+d=0$, we obtain
 Since $t$ was arbitrary, $\beta_\infty$ lies in $M$.
 
 Thus $\beta_\infty$ is a rectifiable curve in $M$,
-which is not constant since $p_\infty\ne \theta_0(p_\infty)$.
+which is not constant since $p_\infty\ne \theta_1(p_\infty)$.
 Since the $D_{\mathrm{dyad}}$-action fixes $A$ pointwise, the curve lies in a sphere centered at any point $o\in A$.
-Furthermore, the radius of the sphere is $r=|o-p_\infty|=|o-\alpha_0(t)|$ for some $t$;
+Furthermore, the radius of the sphere is $r=|o-p_\infty|=|o-\alpha_1(t)|$ for some $t$;
 in particular, $r$ can be taken arbitrarily small.
 \qeds
 
