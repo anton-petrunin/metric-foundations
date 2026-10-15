@@ -42,7 +42,7 @@ The so-called \emph{universal metric trees} $\TT_n$ of finite valence $n\geqslan
 These are complete metric trees with valence $n$ at any point \cite{dyubina-polterovich}.
 The space $\TT_n$ is uniquely defined up to isometry; it is homogeneous, and if $n$ is finite, then it is all-set-homogeneous; the last statement was proved in \cite{lebedeva-petrunin2024}.
 
-All the \emph{terminology} used here, including metric trees, is explained in the next section.
+All the terminology used here, including metric trees, is explained in the next section.
 
 \begin{thm}{Theorem}\label{thm:main}
 Any all-set-homogeneous length space is a universal metric tree of finite valence or a classical space.
@@ -51,13 +51,9 @@ Any all-set-homogeneous length space is a universal metric tree of finite valenc
 Our theorem provides a very economical metric foundation for geometry.
 A special case of our theorem was proved by Garrett Birkhoff \cite{birkhoff};
 namely, he proved that \textit{any all-set-homogeneous geodesic space with locally unique nonbifurcating geodesics is classical}.
-
-For locally compact spaces, our result follows from the structure theory of locally compact groups; moreover, \textit{any locally compact 3-point-homogeneous length space is classical};
+There is also a classical result with additional topological hypotheses: \textit{any locally compact 3-point-homogeneous length space is classical};
 a metric space is called \emph{$n$-point-homogeneous} if any isometry between its subsets with at most $n$ points in each can be extended to an isometry of the whole space.
-This result follows from a theorem of Jacques Tits \cite{tits} about 2-point-homogeneous spaces;
-under additional geometric assumptions, the 3-point-homogeneity statement was proved earlier by Herbert Busemann \cite[V §9]{busemann}.
-
-As in many classification problems, we must first prove a few curious facts about the hypothetical extra examples, only to discover that they form the empty set.
+This result was proved by Herbert Busemann \cite{busemann}; it also follows from the more general result of Jacques Tits \cite{tits} about 2-point-homogeneous spaces.
 
 The theorem is reduced to the following statements:
 \begin{enumerate}[(a)]
@@ -66,7 +62,7 @@ The theorem is reduced to the following statements:
 \item Any all-set-homogeneous geodesic space has locally unique geodesics; see \ref{prop:unique-geod}.
 \item Any all-set-homogeneous geodesic space with locally unique geodesics is a universal tree of finite valence or a classical space; see \ref{thm:tree}.
 \end{enumerate}
-These steps can be read independently; if the reader is interested only in uniquely geodesic spaces, then it is sufficient to read only the last pages of Section~\ref{Locally unique geodesics}.
+These last two steps can be read independently; if the reader is interested only in uniquely geodesic spaces, then it is sufficient to read only the last pages of Section~\ref{Locally unique geodesics}.
 
 \section{Preliminaries}
 
@@ -297,12 +293,12 @@ By all-set-homogeneity, given $0<s<|x-y|$, there is a unique point $z_s$ such th
 |x-z_s|=s.\]
 Moreover, $|z_{s'}-z_s|=|s'-s|$, hence there is a unique geodesic $[xy]$.
 
-Now assume that a geodesic triangle $[xyz]$ with sides smaller than $\eps$ is not a tripod.
+Now choose a geodesic triangle $[xyz]$ with sides smaller than $\eps$.
 By all-set-homogeneity, we can assume that $x\in V$, $y\in W$, and
 \[2\cdot |p-x|+|y-z|=|x-y|+|x-z|.\]
 In this case $p\in [xy]$.
 By the triangle inequality, we also have $p\in [yz]$ or $p\in [xz]$.
-Hence $p\in [yz]$ and $p\in [xz]$ --- a contradiction.
+Hence $p\in [yz]$ and $p\in [xz]$; thus $[xyz]$ is a tripod.
 It follows that an $\tfrac\eps2$-neighborhood of any point in $M$ is a metric tree.
 Since $M$ is all-set-homogeneous, this tree has the same valence $n\geqslant 2$ at every point.
 
@@ -315,7 +311,7 @@ If $n\geqslant3$, then by \ref{prop:global-tree}  $M$ is a universal metric tree
 \subsection*{Reflections and mirrors}
 
 Let $M$ be an all-set-homogeneous space.
-Define the \emph{mirror} of two distinct points $u$ and $v$ in $M$ as the set
+Define the \emph{mirror} of two points $u$ and $v$ in $M$ as the set
 \[\Bis(u,v)=\set{x\in M}{|u-x|=|v-x|}.\]
 
 \begin{thm}{Observation}\label{lem:bisector}
@@ -431,9 +427,6 @@ Consider two converging sequences of points $p_n\to p_\infty$, $q_n\to q_\infty$
 Suppose $\rho_\infty$ is the reflection swapping $p_\infty$ with $q_\infty$ and $\rho_n$ is the reflection swapping $p_n$ with $q_n$ for each $n$.
 Then $\rho_n(z)\to z$ as $n\to\infty$ for any $z\in \Bis_{\rho_\infty}$.
 \end{thm}
-
-Since $z\in \Bis_{\rho_\infty}$, we have $\rho_\infty(z)=z$.
-Once the main theorem is proved, we will also have that $\rho_n(z)\to \rho_\infty(z)$ for any $z$.
 
 \parit{Proof.}
 Fix $z\in\Bis_{\rho_\infty}$.
@@ -1024,12 +1017,13 @@ Consider the set $\Lambda_{a,c}$ of all $\lambda\geqslant 0$
 such that $a=|u-v|$, $c=|u-w|$, and $b+\lambda=|v-w|$ for some points $u,v,w\in M$;
 further assume $\Lambda_{a,c}\ne\varnothing$.
 
-For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
-\begin{figure}[h!]
+\begin{figure}[bt!]
 \centering\vskip-0mm
 \includegraphics{mppics/pic-70}
 \vskip-0mm
 \end{figure}
+
+For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
 but there are also two other distances $\theta(\lambda,\mu)$ and $\Theta(\lambda,\mu)$ defined as the greatest lower bounds of the values $\ell$ and $L$ for configurations of points shown in the picture.
 Formally, they are defined as
 \begin{align*}
@@ -1156,6 +1150,13 @@ Then choose $y,z\in \Sph(u,a)$ such that
 for each $i$, and $|y-z|$ is almost $h(b)$.
 Since $\Theta$ is a metric, we may choose $x=x_i$ that meets the conditions in \ref{eq:lambda-eps}.
 
+\begin{wrapfigure}{o}{40mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-80}
+\vskip-0mm
+\end{wrapfigure}
+
 Choose an almost shortest path $\gamma$ from $w$ to $x$, so its length is sufficiently close to
 $|w-x|=b+\lambda(x)$.
 Choose $b'>0$ (independently of $\eps$) such that $0\z<b-b'\z< \tfrac\delta{100}$; let $c'=a+b'$ and $w'\in\gamma\cap \Sph(u,c')$.
@@ -1165,14 +1166,6 @@ In particular, we have
 \quad\text{and}\quad
 |x-w'|<b'+2\cdot\lambda(x).
 \]
-
-
-\begin{wrapfigure}{o}{40mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-80}
-\vskip-0mm
-\end{wrapfigure}
 
 Let $\rho$ be a reflection swapping $x$ with $y$;
 note that $\rho(u)=u$.
@@ -1288,7 +1281,7 @@ Note that $\rho_1$ commutes with $\sigma$ if and only if $v=w$;
 in this case we can add $\sigma$ to the family, obtaining $n+1$ commuting reflections.
 
 Thus we can assume that $v\ne w$; let $\tau$ be the reflection swapping $v$ with $w$.
-The equality of the distances to $H_1$ gives $x,y\in\Bis(v,w)$.
+The equality of the distances to $H_1$ gives $x,y\in\Bis(u,v)$.
 Hence the reflection $\tau$ fixes $x,y$ and commutes with $\sigma$.
 Each $\rho_i$, $i\ge2$, fixes $v$ and $w$; so it also commutes with $\tau$.
 Thus, discarding $\rho_1$, we obtain $n+1$ commuting reflections
