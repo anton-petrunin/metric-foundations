@@ -329,7 +329,7 @@ The following observation is a version of Birkhoff's reflection construction
 \cite[Theorem 20]{birkhoff}.
 
 \begin{thm}{Observation}\label{lem:reflection}
-Let $M$ be an all-set-homogeneous length space and $u,v\in M$ be distinct.
+Let $M$ be an all-set-homogeneous length space and $u,v\z\in M$ be distinct.
 Then there is an involutive isometry $\rho$ that fixes $\Bis(u,v)$ pointwise and swaps $u$ with $v$.
 Moreover,
 \[\tfrac12\cdot |x-\rho(x)|=\inf\set{|x-o|}{o\in \Bis(u,v)}\]
@@ -542,9 +542,9 @@ By the intermediate value theorem, we can find $0<r\leqslant r_0<r'\leqslant r_1
 If $\gamma_0$, $\gamma_1$, and $\gamma_2$ are as above,
 then
 \[\gamma_1(r)\mapsto\gamma_1(r'),
-\qquad
+\quad
 \gamma_2(r)\mapsto\gamma_2(r'),
-\qquad
+\quad
 \gamma_0(r')\mapsto\gamma_0(r)\]
 defines a distance-preserving map on a 3-point set,
 which can be extended to an isometry of $M$.
@@ -563,8 +563,8 @@ and $\gamma_0(r)$, $\gamma_1(r')$, $\gamma_2(r')$.
 The same argument proves the second statement.
 Indeed, assume $s'$ is a splitting function for another fork described by geodesics $\gamma'_0$, $\gamma'_1$, and $\gamma'_2$.
 If $s(r)=s'(r')$ for $r$ and $r'$ in the common domain, then
-\[\gamma'_1(r')\mapsto\gamma_1(r),\qquad
-\gamma'_2(r')\mapsto\gamma_2(r),\qquad
+\[\gamma'_1(r')\mapsto\gamma_1(r),\quad
+\gamma'_2(r')\mapsto\gamma_2(r),\quad
 \gamma'_0(r)\z\mapsto\gamma_0(r')\]
 defines a distance-preserving map, which extends to an isometry of $M$, implying $r=r'$.
 Since both functions are continuous and strictly increasing from $0$, it follows that $s=s'$ on their common domain.
@@ -585,7 +585,7 @@ r'\in[0,r].\]
 \subsection*{Rhombus}
 
 \begin{thm}{Lemma}\label{lem:rhombus}
-Let $M$ be a geodesic all-set-homogeneous space with locally nonunique geodesics.
+Let $M$ be a geodesic all-set-homogeneous space with locally non\-unique geodesics.
 Then for any sufficiently small $r$, there is a configuration of four points $p_1$, $p_2$, $q_1$, and $q_2$ such that
 \[|p_1-p_2|=2\cdot r,\quad |q_1-q_2|=s(r),\quad\text{and}\quad |p_i-q_j|=r\]
 for all $i$ and $j$;
@@ -751,8 +751,10 @@ Therefore they cannot be assumed; keep this in mind while reading further.
 \begin{enumerate}[(i)]
 \item If two distinct mirrors contain $A$, then they have no other points of intersection.
 \item If two distinct mirrors in $M$ intersect, then one mirror intersects both open sides of the other.
-\item Consider two converging sequences of points $p_n\to p_\infty$, $q_n\to q_\infty$ in $M$ such that $p_\infty\ne q_\infty$, and $p_n\ne q_n$.
-Suppose $\rho_\infty$ is the reflection swapping $p_\infty$ with $q_\infty$ and $\rho_n$ is the reflection swapping $p_n$ with $q_n$ for each $n$.
+\item Let $\rho_1,\rho_2,\dots$, and $\rho_\infty$ be reflections of $M$.
+Suppose $\rho_n$ swaps distinct points $p_n$ with $q_n$ for each $n$;
+furthermore, $p_n\to p_\infty$, $q_n\to q_\infty$, $p_\infty\ne q_\infty$, and
+$\rho_\infty$ swaps $p_\infty$ with $q_\infty$.
 Then $\rho_n(z)\to \rho_\infty(z)$ for any $z\in M$.
 \end{enumerate}
 If the last statement is known, then the monster lemma can be proved in a few lines; instead we have to use its weaker version \ref{lem:cont-on-mirror}.
@@ -787,7 +789,9 @@ By the triangle inequality the path lies in a small neighborhood of $o$.
 \parit{Dyadic action.}
 Let us recursively construct a sequence of reflections $\sigma=\tau_1$, $\tau_2,\ldots$ and paths $\alpha_1$, $\alpha_2,\ldots$ in $M\setminus A$
 such that $\alpha_n$ runs from $\Bis_\rho$ to $\Bis_{\tau_n}$,
-\[(\tau_{n+1}\circ\rho)^2=\tau_n\circ\rho
+\[(\tau_{n+1}\circ\rho)^2=\tau_n\circ\rho,
+\quad
+\Fix (\tau_n\circ\rho)=A,
 \quad\text{and}\quad
 2\cdot \length \alpha_{n+1}\leqslant \length \alpha_{n}
 \eqlbl{eq:sigma-n-rho}\]
@@ -796,15 +800,14 @@ for each $n$.
 Suppose $\tau_n$ and $\alpha_n$ are constructed.
 By the intermediate value theorem there is a point $x\in \alpha_n$ such that $|x-\rho(x)|=|x-\tau_n(x)|$.
 Let $\tau_{n+1}$ be the reflection swapping $\rho(x)$ and $\tau_n(x)$; note that $\tau_{n+1}$ fixes $x$ and each point in $A$.
-By uniqueness (see \ref{lem:rigidity}) we have the first identity in \ref{eq:sigma-n-rho}.
+Now $\tau_{n+1}\circ\rho\circ\tau_{n+1}=\tau_n$ since both reflections swap $x$ with $\tau_n(x)$, and we have the first identity in \ref{eq:sigma-n-rho}.
 
-Put $\theta_n=\tau_n\circ\rho$; so $\theta_{n+1}^2=\theta_n$ for every $n$.
-By induction, we have
-\[\Fix \theta_n=\Bis_{\tau_n}\cap \Bis_\rho=A
+Put $\theta_n=\tau_n\circ\rho$.
+Note that $\Fix \theta_1=\Bis_{\tau_1}\cap \Bis_\rho=A$.
+Suppose
+\[\Fix \theta_n=\Bis_{\tau_n}\cap \Bis_\rho=A.
 \eqlbl{eq:Fix=A}\]
-for every $n$.
-Indeed, the base case $n=1$ is trivial; suppose \ref{eq:Fix=A} holds for $n$.
-Since $\theta_{n+1}^2=\theta_n$, we have $\Fix \theta_{n+1}\subset \Fix \theta_n$.
+By the first identity in \ref{eq:sigma-n-rho}, $\theta_{n+1}^2=\theta_n$, and we have $\Fix \theta_{n+1}\subset \Fix \theta_n$.
 Since $\tau_{n+1}$ fixes each point in $A$, we have the opposite inclusion.
 Since
 \[\Fix \theta_{n+1}\supset \Bis_{\tau_{n+1}}\cap \Bis_\rho\supset A,\]
@@ -824,8 +827,9 @@ Furthermore the mirrors of any two distinct reflections in $D_{\mathrm{dyad}}$ i
 
 \parit{Spherical curve in $\bar M$.}
 The arc $\alpha_n$ has $2^{n+1}$ copies obtained by applying $\rho$, $\tau_n$, and their compositions.
-The resulting closed curves $\beta_n$ have $D_{2^{n}}$-symmetry and uniformly bounded lengths;
-we will assume that $\beta_n$ comes with a $D_{2^{n}}$-symmetric parametrization by $\S^1=\RR/\ZZ$ starting at $\Bis_\rho$ with Lipschitz constant $4\,\cdot\length\alpha_1$.
+The resulting closed curve $\beta_n$ has $D_{2^{n}}$-symmetry;
+furthermore, the lengths of all $\beta_n$ are uniformly bounded.
+We will assume that $\beta_n$ comes with a $D_{2^{n}}$-symmetric parametrization by $\S^1=\RR/\ZZ$ starting at $\Bis_\rho$ with Lipschitz constant $4\,\cdot\length\alpha_1$.
 
 
 
@@ -839,15 +843,16 @@ the limit parametrization respects the $D_{\mathrm{dyad}}$-action.
 Denote by $\tilde\alpha_n$ the subarc of $\alpha_1$ that corresponds to $\alpha_n$ after unfolding it back to $\alpha_1$.
 Let $p_n$ be the endpoint of $\tilde\alpha_n$ that corresponds to the endpoint of $\alpha_n$ on $\Bis_\rho$.
 Then $p_n\to p_\infty\in\alpha_1\subset M\setminus A$.
-Let $\rho_n$ be the corresponding conjugate of $\rho$; so, $\rho_n(p_n)=p_n$.
-
 Note that $p_\infty$ lies in $\beta_\infty$ and hence the whole $D_{\mathrm{dyad}}$-orbit of $p_\infty$ lies on $\beta_\infty$.
 
-The reflection $\rho_n$ has its partner reflection $\sigma_n=\theta_1\circ \rho_n$; it swaps $p_n$ with $\theta_1(p_n)$.
+Let $\rho_n$ be the corresponding conjugate of $\rho$; so, $\rho_n(p_n)=p_n$.
+It has a partner reflection $\sigma_n=\theta_1\circ \rho_n$, which swaps $p_n$ with $\theta_1(p_n)$.
 Let $\sigma_\infty$ be the reflection swapping $p_\infty$ and $\theta_1(p_\infty)$.
 By \ref{lem:cont-on-mirror}, we have
 \[
 z\in\Bis_{\sigma_\infty}
+\quad\Rightarrow\quad
+\sigma_n(z)\to z
 \quad\Rightarrow\quad
 \rho_n(z)\to \theta_1(z).
 \]
@@ -856,6 +861,8 @@ A path from $p_\infty$ to $\theta_1(p_\infty)$ in $M\setminus A$
 gives a point $q_\infty\in\Bis_{\sigma_\infty}\setminus A$.
 By \ref{lem:cont-on-mirror} and \ref{lem:reflection}, we can choose $q_n\in\Bis_{\sigma_n}$ such that $q_n\to q_\infty$.
 Note that $\rho_n(q_n)=\theta_1(q_n)$ for all large $n$.
+
+%???+PIC
 
 Let $\rho_\infty$ be the reflection swapping $q_\infty$ with $\theta_1(q_\infty)$.
 By \ref{lem:cont-on-mirror}, $\rho_n(z)\to z$ for every $z\in\Bis_{\rho_\infty}$.
@@ -866,36 +873,38 @@ Together with the convergence on $\Bis_{\sigma_\infty}$, this implies
 =|z-\theta_1(w)|
 \]
 for $z\in\Bis_{\rho_\infty}$ and $w\in\Bis_{\sigma_\infty}$.
-Consequently, if $w\in\Bis_{\sigma_\infty}\setminus A$, then $\Bis_{\rho_\infty}\subset\Bis(w,\theta_1(w))$.
+Consequently, if $w\in\Bis_{\sigma_\infty}\setminus A$, then $\Bis_{\rho_\infty}\z\subset\Bis(w,\theta_1(w))$.
 By \ref{lem:rigidity}, these mirrors coincide and hence
 \[\rho_\infty=\theta_1\circ\sigma_\infty;\]
 in particular, $\theta_1\circ\sigma_\infty$ is a reflection.
 
-We claim that
+Let us show that
 \[
 \rho_\infty\circ\theta_m\circ\rho_\infty=\theta_m^{-1}
 \eqlbl{eq:rhothetarhotheta}
 \]
 for every $m$.
+
 Fix $m$;
 for $n\geqslant m$, we have $\rho_n\circ\theta_m=\theta_m^{-1}\circ\rho_n$.
-Consequently,
+From above
 \[
 \rho_n(z)\to\rho_\infty(z),
-\qquad
+\quad\text{and therefore}\quad
 \rho_n\circ\theta_m(z)
 \to
 \theta_m^{-1}\circ\rho_\infty(z),
 \]
-for every $z\in\Bis_{\rho_\infty}\cup\Bis_{\sigma_\infty}$.
+for every $z\in\Bis_{\rho_\infty}\cup\Bis_{\sigma_\infty}$;
+indeed, if $z\in\Bis_{\rho_\infty}$, then $\rho_\infty(z)=z$,
+and if $z\in\Bis_{\sigma_\infty}$, then $\rho_\infty(z)=\theta_1(z)$.
 Thus the maps $\rho_n$ converge on $\Bis_{\rho_\infty}\cup\Bis_{\sigma_\infty}$ and its image under $\theta_m$ to a distance-preserving map with values in~$M$.
 By all-set-homogeneity, this partial isometry extends
-to an isometry $\iota$ of $M$, which agrees with $\rho_\infty$ on two mirrors $\Bis_{\rho_\infty}$ and $\Bis_{\sigma_\infty}$;
-hence \ref{lem:rigidity} gives
-$\iota=\rho_\infty$.
+to an isometry $\iota$ of $M$, which agrees with $\rho_\infty$ on $\Bis_{\rho_\infty}\cup\Bis_{\sigma_\infty}$;
+by \ref{lem:rigidity}, $\iota=\rho_\infty$.
 Therefore $\rho_\infty\circ\theta_m$ and
-$\theta_m^{-1}\circ\rho_\infty$ agree on $\Bis_{\rho_\infty}$ and $\Bis_{\sigma_\infty}$.
-Another application of \ref{lem:rigidity} proves \ref{eq:rhothetarhotheta}.
+$\theta_m^{-1}\circ\rho_\infty$ agree on $\Bis_{\rho_\infty}\cup\Bis_{\sigma_\infty}$.
+Another application of \ref{lem:rigidity} provides \ref{eq:rhothetarhotheta}.
 
 For every $m\geqslant1$ and $k\in\ZZ$, we have
 \[
@@ -919,64 +928,67 @@ so
 From now on $\beta_\infty(d)\in M$ for any dyadic $d\in\RR/\ZZ$.
 
 \parit{Pushing $\beta_\infty$ into $M$.}
-Fix $t\in\RR/\ZZ$ and choose dyadic numbers $t_j\to t$.
-Let $\eta_j$ be the corresponding reflections
-$\theta_m^k\circ\rho_\infty$; so $\eta_j\circ\beta_\infty(s)=\beta_\infty(t_j-s)$.
-Let us show that $\beta_\infty(t)\in M$.
+Let us show that $\beta_\infty(t_\infty)\in M$ for any $t_\infty\in\RR/\ZZ$.
 
-Choose a rectifiable path $\gamma$ from $p_\infty$
-to $\theta_1(p_\infty)$ in $M\setminus A$.
-Since $\theta_1$ interchanges the sides of every
-$\Bis_{\eta_j}$, we can choose
-$y_j\in\gamma\cap\Bis_{\eta_j}$.
-After passing to a subsequence,
-$y_j\to y\in\gamma\subset M\setminus A$.
+For every dyadic $t=\tfrac k{2^n}$, let $\Theta_t=\theta_n^k$.
+Choose dyadic numbers $t_j\to t_\infty$.
+Let $\eta_j=\Theta_{t_j}\circ\rho_\infty$; so $\eta_j\circ\beta_\infty(s)=\beta_\infty(t_j-s)$.
 
-Let us apply the preceding construction of a limiting pair
-of reflections to $\eta_j$ and $\theta_1\circ\eta_j$.
-It gives a reflection $\eta$ such that $\eta_j(z)\to\eta(z)$
-for every $z\in\Bis_\eta$, and $\eta\circ\theta_m=\theta_m^{-1}\circ\eta$ for every $m$.
-Moreover, $\theta_1\circ\eta$ is a reflection.
 
-The mirror $\Bis_\eta$ meets every closed curve $\beta_n$:
+
+
+
+Choose a rectifiable path $\gamma$ from $p_\infty$ to $\theta_1(p_\infty)$ in $M\setminus A$.
+Since $\theta_1$ interchanges the sides of every $\Bis_{\eta_j}$, we can choose $y_j\in\gamma\cap\Bis_{\eta_j}$.
+After passing to a subsequence, $y_j\to y_\infty\in\gamma\subset M\setminus A$.
+Let us apply the preceding construction of a limiting pair of reflections to $\eta_j$ and $\theta_1\circ\eta_j$,
+where $y_\infty$ plays the role of $p_\infty$.
+It gives a reflection $\eta_\infty$ such that $\eta_j(z)\to\eta_\infty(z)$
+for every $z\in\Bis_{\eta_\infty}$, and $\eta_\infty\circ\theta_m=\theta_m^{-1}\circ\eta_\infty$ for every $m$.
+Moreover, $\theta_1\circ\eta_\infty$ is a reflection.
+
+The mirror $\Bis_{\eta_\infty}$ meets every closed curve $\beta_n$:
 indeed, $\beta_n$ is $\theta_1$-invariant,
-and $\theta_1$ interchanges the sides of $\Bis_\eta$.
-Choose $z_n\in\beta_n\cap\Bis_\eta$.
-Since $\beta_n$ converge to the closed curve $\beta_\infty$, a subsequence of $z_n$ converges to some $\xi\in \beta_\infty\cap\Cl_{\bar M}\Bis_\eta$;
+and $\theta_1$ interchanges the sides of $\Bis_{\eta_\infty}$.
+Choose $z_n\in\beta_n\cap\Bis_{\eta_\infty}$.
+Since $\beta_n$ converge to the closed curve $\beta_\infty$, a subsequence of $z_n$ converges to a point $z_\infty$ in $\beta_\infty\cap\Cl_{\bar M}\Bis_{\eta_\infty}$;
 here $\Cl_{\bar M}$ denotes closure in $\bar M$.
-Thus $\eta(\xi)=\xi$; recall that each isometry of $M$ is identified with its extension to $\bar M$.
+Thus $\eta_\infty(z_\infty)=z_\infty$; recall that each isometry of $M$ is identified with its extension to $\bar M$.
 
-The convergence $\eta_j\to\eta$ on $\Bis_\eta$
-also holds at $\xi$.
-Indeed, for $z\in\Bis_\eta$,
+By \ref{lem:cont-on-mirror}, we have convergence $\eta_j\to\eta_\infty$ on $\Bis_{\eta_\infty}$,
+and it also holds at $z_\infty$.
+Indeed, for $z\in\Bis_{\eta_\infty}$,
 \[
-\limsup_{j\to\infty}|\eta_j(\xi)-\eta(\xi)|
-\leqslant 2\cdot|\xi-z|,
+\limsup_{j\to\infty}|\eta_j(z_\infty)-\eta_\infty(z_\infty)|
+\leqslant 2\cdot|z_\infty-z|,
 \]
 and the right-hand side can be made arbitrarily small.
 
-Choose $s$ such that $\xi=\beta_\infty(s)$.
-Since $\eta_j(\xi)\to\xi$, we have $\beta_\infty(t-s)=\xi$.
-For every dyadic $d=\tfrac k{2^n}$, let $\Theta_d=\theta_n^k$.
-Then
-\[
-\eta\circ\beta_\infty(s+d)
-=\eta\circ\Theta_d(\xi)
-=\Theta_{-d}\circ\eta(\xi)
-=\Theta_{-d}(\xi)
-=\beta_\infty(t-s-d).
-\]
+Choose $s$ such that $z_\infty=\beta_\infty(s)$.
+Since $\eta_j(z_\infty)\to z_\infty$,
+we have $\beta_\infty(t_\infty-s)\z=z_\infty$.
+If $d$ is dyadic, then
+\begin{align*}
+\eta_\infty\circ\beta_\infty(s+d)
+&=\eta_\infty\circ\Theta_d(z_\infty)=
+\\
+&=\Theta_{-d}\circ\eta_\infty(z_\infty)=
+\\
+&=\Theta_{-d}(z_\infty)=
+\\
+&=\beta_\infty(t_\infty-s-d).
+\end{align*}
 By continuity, the same holds for every $d$.
 If $s+d=0$, we obtain
 \[
-\beta_\infty(t)=\eta\circ\beta_\infty(0)=\eta(p_\infty)\in M.
+\beta_\infty(t_\infty)=\eta_\infty\circ\beta_\infty(0)=\eta_\infty(p_\infty)\in M.
 \]
-Since $t$ was arbitrary, $\beta_\infty$ lies in $M$.
+Since $t_\infty$ was arbitrary, $\beta_\infty$ lies in $M$.
 
 Thus $\beta_\infty$ is a rectifiable curve in $M$,
 which is not constant since $p_\infty\ne \theta_1(p_\infty)$.
 Since the $D_{\mathrm{dyad}}$-action fixes $A$ pointwise, the curve lies in a sphere centered at any point $o\in A$.
-Furthermore, the radius of the sphere is $r=|o-p_\infty|=|o-\alpha_1(t)|$ for some $t$;
+Furthermore, the radius of the sphere is $r=|o-p_\infty|\z=|o-\alpha_1(t)|$ for some $t$;
 in particular, $r$ can be taken arbitrarily small.
 \qeds
 
@@ -1024,12 +1036,13 @@ Consider the set $\Lambda_{a,c}$ of all $\lambda\geqslant 0$
 such that $a=|u-v|$, $c=|u-w|$, and $b+\lambda=|v-w|$ for some points $u,v,w\in M$;
 further assume $\Lambda_{a,c}\ne\varnothing$.
 
-For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
-\begin{figure}[h!]
+\begin{figure}[t!]
 \centering\vskip-0mm
 \includegraphics{mppics/pic-70}
 \vskip-0mm
 \end{figure}
+
+For a pair $\lambda,\mu\in\Lambda_{a,c}$ we may consider the distance $|\lambda-\mu|$ induced from $\RR$,
 but there are also two other distances $\theta(\lambda,\mu)$ and $\Theta(\lambda,\mu)$ defined as the greatest lower bounds of the values $\ell$ and $L$ for configurations of points shown in the picture.
 Formally, they are defined as
 \begin{align*}
@@ -1067,7 +1080,7 @@ Their limit represents the limit in the corresponding metric.
 Let $M$ be a complete all-set-homogeneous length space.
 Assume there are no points $u,v,w\in M$ such that
 \[
-|u-v|=a,\qquad |v-w|=b,\qquad |u-w|=c,
+|u-v|=a,\quad |v-w|=b,\quad |u-w|=c,
 \]
 where $a>0$, $b>0$, and $c=a+b<\diam M$.
 Then any sequence in $\Lambda_{a,c}$ converging to $0$ contains a subsequence $\lambda_1,\lambda_2,\ldots$
@@ -1156,6 +1169,13 @@ Then choose $y,z\in \Sph(u,a)$ such that
 for each $i$, and $|y-z|$ is almost $h(b)$.
 Since $\Theta$ is a metric, we may choose $x=x_i$ that meets the conditions in \ref{eq:lambda-eps}.
 
+\begin{wrapfigure}{o}{40mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-80}
+\vskip-0mm
+\end{wrapfigure}
+
 Choose an almost shortest path $\gamma$ from $w$ to $x$, so its length is sufficiently close to
 $|w-x|=b+\lambda(x)$.
 Choose $b'>0$ (independently of $\eps$) such that $0\z<b-b'\z< \tfrac\delta{100}$; let $c'=a+b'$ and $w'\in\gamma\cap \Sph(u,c')$.
@@ -1166,13 +1186,6 @@ In particular, we have
 |x-w'|<b'+2\cdot\lambda(x).
 \]
 
-
-\begin{wrapfigure}{o}{40mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-80}
-\vskip-0mm
-\end{wrapfigure}
 
 Let $\rho$ be a reflection swapping $x$ with $y$;
 note that $\rho(u)=u$.
