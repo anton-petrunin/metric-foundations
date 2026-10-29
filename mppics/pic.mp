@@ -487,7 +487,7 @@ rimmark3(p21,p22,p23);
 dOt z.x,z.y,z.u,z.v,z.w;
 
 label.ulft (btex $x$ etex, z.x);
-label.urt (btex $x$ etex, z.y);
+label.urt (btex $y$ etex, z.y+(1,-1));
 label.llft (btex $u$ etex, z.u);
 label.lrt (btex $v$ etex, z.v);
 label.lrt (btex $w$ etex, z.w);

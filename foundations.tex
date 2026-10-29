@@ -68,6 +68,9 @@ The theorem is reduced to the following statements:
 \end{enumerate}
 These steps can be read independently; if the reader is interested only in uniquely geodesic spaces, then it is sufficient to read only the last pages of Section~\ref{Locally unique geodesics}.
 
+The final section discusses an alternative approach to the proof, extensions beyond length spaces, and related questions.
+It can be read independently of the proof of the main theorem.
+
 \section{Preliminaries}
 
 This section should be used as a reference.
@@ -87,7 +90,9 @@ A \emph{sphere} and a \emph{ball} with center $p$ and radius $r>0$ in a metric s
 \begin{align*}
 \Sph(p,r)=\Sph(p,r)_M&=\set{x\in M}{|p-x|=r},
 \\
-\Ball(p,r)=\Ball(p,r)_M&=\set{x\in M}{|p-x|<r};
+\Ball(p,r)=\Ball(p,r)_M&=\set{x\in M}{|p-x|<r}
+\\
+\bar\Ball(p,r)=\bar\Ball(p,r)_M&=\set{x\in M}{|p-x|\leqslant  r};
 \end{align*}
 here $|\ -\ |$ denotes the distance between points in $M$.
 We say that $x$ is a midpoint of $p$ and $q$ if $|p-x|=|q-x|=\tfrac12\cdot|p-q|$.
@@ -280,7 +285,7 @@ Choose $p\in M$ and $r>0$ such that $\Ball(p,r)\setminus\{p\}$ is not connected.
 We can assume that $\Ball(p,r)\setminus\{p\}\ne\emptyset$; otherwise $M$ is a one-point space.
 
 Let $V$ and $W$ be two connected components of $\Ball(p,r)\setminus\{p\}$;
-choose two points $v\in V$ and $w\in W$ and $0<\eps<r$ such that $|p-v|>\eps$ and $|p-w|>\eps$.
+choose two points $v\in V$ and $w\in W$ and $0<\eps<\tfrac r2$ such that $|p-v|>\eps$ and $|p-w|>\eps$.
 Since $M$ is a length space, we have
 \[
 0<s<\eps
@@ -398,11 +403,11 @@ Let $p=\gamma(0)$, $q=\gamma(1)$, and $s=|p-q|$.
 Choose $z\in M\setminus \Bis_\rho$ sufficiently close to $q$,
 and let $z'=\rho(z)$.
 Observe that $|z-\gamma(t)|=|z'-\gamma(t)|$ for any $t$.
-All-set-homogeneity implies that given $\eps>0$ there is $\delta>0$ such that if $|z-z'|<\delta$ and $\eps<|x-z|=|x-z'|<s$, then
+All-set-homogeneity implies that given $\eps>0$ there is $\delta>0$ such that if $|z-z'|<\delta$ and $\eps<|x-z|=|x-z'|<\tfrac s2$, then
 \[\Ball(x,\delta)\subset \Bis(z,z')=\Bis_\rho;\]
 the last equality follows from \ref{lem:reflection}.
 
-It follows that $q$ is an isolated point of $\partial W$ and hence is a local cut point of $M$.
+It follows that $q$ is an isolated point of $\partial W$ and hence is a local cut point of~$M$.
 \qeds
 
 The following lemma is about isosceles-free spaces, which were studied by Christian Bargetz, Adam Bartoš, Wiesław Kubiś, and Franz Luggin \cite{bargetz-bartos-kubis-luggin}.
@@ -1262,19 +1267,12 @@ Taking their union and passing to its closure gives a geodesic of length $a$.
 Now, by all-set-homogeneity, $M$ is geodesic.
 \qeds
 
-\section{Final remarks}
+\section{Remarks}
 
 In the thin-mirror case, one could prove geodesic existence and local uniqueness directly, using a family of pairwise commuting reflections of maximum cardinality and a version of the monster lemma adapted to the whole family.
 The strengthened lemma would provide suitable short retractions onto half-intersections of mirrors.
 The enlargement argument below then forces the relevant distance coordinate to be injective, reducing the construction of geodesics to an ordered length space.
 We chose the present organization to make the geodesic case more accessible and independently readable.
-
-
-
-
-
-
-
 
 \begin{thm}{Enlargement lemma}
 Let $M$ be an all-set-homogeneous length space with thin mirrors.
@@ -1307,6 +1305,73 @@ Each $\rho_i$, $i\ge2$, fixes $v$ and $w$; so it also commutes with $\tau$.
 Thus, discarding $\rho_1$, we obtain $n+1$ commuting reflections
 $\sigma$, $\tau$, $\rho_2,\ldots,\rho_n$.
 \qeds
+
+
+The next natural step would be classification of connected all-set-homogeneous spaces.
+Such spaces appear if one modifies the metric on an all-set-homogeneous length space by a function.
+Namely, let $M$ be a length space, set $L=\diam M$.
+Suppose $\varphi\colon[0,L]\to[0,D]$ is a continuous strictly increasing subadditive function such that $\varphi(0)=0$; \emph{subadditive} means $\varphi(a+b)\le \varphi(a)+\varphi(b)$ if both sides are defined.
+Note that the function $(x,y)\mapsto \varphi(|x-y|)$ defines another metric on $M$;
+let us denote by $M^\varphi$ the obtained metric space.
+If $M$ is an all-set-homogeneous length space, then $M^\varphi$ is a connected all-set-homogeneous space.
+
+\begin{thm}{Proposition}
+Any complete path-connected all-set-homogeneous space is isometric to $M^\varphi$, where $M$ is a universal metric tree of finite valence or a classical space and $\varphi\colon[0,\diam M]\to [0,D]$ is a continuous strictly increasing subadditive function such that $\varphi(0)=0$.
+\end{thm}
+
+\begin{thm}{Question}
+Does the same hold for every connected all-set-homogeneous space?
+\end{thm}
+
+The proof follows the idea of Jacques Tits \cite[§ 3]{tits}.
+
+\parit{Proof.}
+We will show that any complete path-connected all-set-homogeneous space $X$ is isometric to $M^\varphi$, where $M$ is a length space and $\varphi$ is a strictly increasing function such that $\varphi(0)=0$.
+Once this is done, then the main theorem finishes the proof.
+
+Any ball (closed or open) in $X$ is path-connected.
+Indeed, connect $p$ to $x$ by a path, say $\gamma$;
+choose the first point $\gamma(t)$ at the distance $|p-x|$ from $p$;
+choose an isometry $\iota$ that fixes $p$ and moves $\gamma(t)$ to $x$;
+the path $\iota\circ\gamma|_{[0,t]}$ connects $p$ to $x$ and lies in the ball containing $x$ with the center at $p$.
+
+Let $D=\diam X$.
+Note that there is an operation $\oplus$ on $[0,D]$ such that
+\[\bar\Ball(p,r\oplus s)=\Cl_X\left(\bigcup_{q\in \bar\Ball(p,r)}\bar\Ball(q,s)\right);\]
+in particular, the set on the right hand side is a ball.
+Furthermore, observe that $\oplus$ is symmetric, associative, continuous, and $0<r<D$ $\Rightarrow$ $r<r\oplus r$.
+By the linearization theorem \cite[(3.3)]{ling1965},
+\[\varphi^{-1}(r\oplus s)=\min\{\,\varphi^{-1}(r)+\varphi^{-1}(s),L\,\}\]
+for some increasing continuous subadditive function $\varphi\colon[0,L]\to [0,D]$.%
+\footnote{We might have $L=\infty$ or $D=\infty$; for example, consider the function $\varphi\colon[0,\infty]\to[0,1]$ defined by $\varphi(t)=\tfrac t{t+1}$ with $\varphi(\infty)=1$.}
+Note that
+\[|x-z|\leqslant |x-y|\oplus |y-z|\leqslant|x-y|+ |y-z|\]
+for any $x,y,z\in X$; therefore, subadditivity of $\varphi$ follows.
+
+$\varphi^{-1}(|\ -\ |)$ defines a new metric on $X$; indeed any pair of points $x$ and $y$ can be connected by a chain $x=x_0,\dots,x_n=y$ such that $|x_{i}-x_{i-1}|<\eps$, where $\eps>0$ is small; therefore, $\varphi^{-1}(|x -y|)\leqslant n\cdot \varphi^{-1}(\eps)<\infty$; the remaining metric axioms are straightforward.
+Denote by $M$ the resulting metric space; note that $L=\diam M$.
+Since $X$ is complete, so is $M$.
+Note that $M$ has almost midpoints; by Menger's lemma it is a length space.
+\qeds
+
+By Tits' theorem quoted in the introduction \cite{tits}, a locally compact geodesic 3-point-homogeneous space is classical; in particular it is  \emph{finite-set-homogeneous}; that is, it is $m$-point-homogeneous for every positive integer $m$.
+
+The class of complete finite-set-homogeneous geodesic spaces is much richer.
+It includes infinite-dimensional analogs of classical spaces, as well as universal metric trees of infinite valence.
+Another class of examples comes from metric Fraïssé limits;
+in particular, Urysohn universal spaces (unbounded and bounded).
+All these additional spaces are isometric to their own proper subsets (they also include infinite equilateral sets); therefore they are not all-set-homogeneous.
+
+\begin{thm}{Question}
+Is there a positive integer $n$ such that any $n$-point-homogeneous  geodesic space is finite-set-homogeneous?
+\end{thm}
+
+The champion so far is the space of Lebesgue-measurable sets up to measure zero on $[0,1]$ with metric defined by $\mu(A\triangle B)$, where $\triangle$ denotes the symmetric difference.
+This space is 3-point-homogeneous, but not 4-point-homogeneous.
+For general metric spaces, a negative answer was found by Manfred Droste and Dugald Macpherson \cite{droste-macpherson}.
+
+
+
 
 \parbf{Acknowledgements.}
 We thank Marcos Cossarini, James E. Hanson, Sergei Ivanov, Linus Kramer, and Alexander Lytchak for helpful discussions, both in person and on MathOverflow.
