@@ -142,7 +142,7 @@ Then $f(x)\in \Sigma_n$ for every $n$.
 Assume an all-set-homogeneous metric space $X$ contains a nontrivial rectifiable curve. Then the following holds.
 \begin{enumerate}[(i)]
 \item There is $\eps>0$ such that any two connected components of $X$ lie $\eps$-apart from each other.
-\item Let $Y$ be a connected component of $X$, equipped with the length metric $|\ -\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$. Then $Y$ is an all-set-homogeneous length space; moreover, there is a strictly increasing continuous function $\psi_X$ such that $\psi_X(0)=0$ and
+\item Assume that a connected component $Y$ of $X$, equipped with the length metric $|\ \z-\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$. Then $Y$ is an all-set-homogeneous length space; moreover, there is a strictly increasing continuous function $\psi_X$ such that $\psi_X(0)=0$ and
 \[|x-y|_Y=\psi_X(|x-y|_X)\]
 for any $x,y\in Y$.
 \end{enumerate}
@@ -152,12 +152,15 @@ for any $x,y\in Y$.
 \parit{Proof.}
 We can assume that the curve is compact; let $\eps>0$ be its diameter.
 
-Note that two points $x$ and $y$ lie in one connected component of $X$ if they can be connected by a chain of points $x=x_0,x_1,\ldots,x_n=y$ such that $|x_i-x_{i+1}|\leqslant\eps$ for every $i$.
-In this case, $x_i$ can be connected to $x_{i+1}$ by a rectifiable curve; thus the same can be done for $x$ and $y$.
-In particular, $|x-y|_Y<\infty$.
+\parit{(i)} If $x$ and $y$ lie in different connected components of $X$, then $|x-y|_X>\eps$.
 
-On the other hand, if $x$ and $y$ lie in different connected components of $X$, then $|x-y|_X>\eps$.
-These observations together with all-set-homogeneity in $X$ imply the rest of the statements.
+\parit{(ii)}  If two points $x$ and $y$ lie in one connected component of $X$,
+then they can be connected by a chain of points $x=x_0,x_1,\ldots,x_n=y$ such that $|x_i-x_{i+1}|\leqslant\eps$ for every $i$.
+In this case, $x_i$ can be connected to $x_{i+1}$ by a rectifiable curve;
+thus the same can be done for $x$ and $y$.
+
+In particular, $|x-y|_Y<\infty$ for any $x,y\in Y$.
+It remains to apply all-set-homogeneity of $X$.
 \qeds
 
 A subset $E$ of a metric space is called equilateral if the distance $|e-e'|$ is the same for any pair of distinct points $e,e'\in E$.
@@ -186,6 +189,7 @@ if any nontrivial geodesic in $M$ can be extended to a local geodesic defined on
 Any all-set-homogeneous geodesic space $M$ is geodesically complete.
 \end{thm}
 
+In fact 2-point-homogenuity is sufficient, but we will not need it.
 Once we prove the main theorem, we will get that \textit{every $(\diam M)$-long local geodesic in an all-set-homogeneous geodesic space $M$ is a geodesic}.
 
 \parit{Proof.}
@@ -213,8 +217,11 @@ Let $\ell=\lim |x_0-x_n|$;
 note that $\ell>0$.
 
 Denote by $\gamma_n$ the geodesic from $x_0$ to $x_n$ that is parametrized from $x_0$.
-If $0\leqslant t<\ell$, then the sequence $\gamma_n(t)$ stabilizes;
-that is, $\gamma_i(t)=\gamma_j(t)$ for all sufficiently large $i$ and $j$.
+Since $T$ is a tree,
+\[2\cdot t\leqslant|x_0-x_i|+|x_0-x_j|-|x_i-x_j|
+\quad\Rightarrow\quad
+\gamma_i(t)=\gamma_j(t).\]
+Therefore the sequence $\gamma_n(t)$ stabilizes for any for any $0\leqslant t<\ell$.
 Defining $\gamma_\infty(t)$ as $\gamma_n(t)$ for sufficiently large $n$ produces a geodesic $\gamma_\infty \colon[0,\ell)\to T$.
 Since $T$ is geodesically complete, $\gamma_\infty$ extends to $[0,\ell]$, and then $x_0,x_1,\ldots$ converge to $\gamma_\infty(\ell)$ --- a contradiction.
 \qeds
@@ -225,13 +232,12 @@ which is the (unique up to isometry) complete metric tree with valence $n$ at an
 
 \begin{thm}{Proposition}\label{prop:global-tree}
 Let $M$ be an all-set-homogeneous length space.
-Suppose every point of $M$ has a neighborhood isometric to a metric tree of valence at least $3$.
+Suppose some (and therefore every) point of $M$ has a neighborhood isometric to a metric tree of valence at least $3$.
 Then $M$ is a universal metric tree of finite valence.
 \end{thm}
 
 \parit{Proof.}
-Let us show that $M$ is a metric tree;
-in other words, $M$ does not contain an embedded circle \cite[2.2.3]{chiswell}.
+It is sufficient to show that $M$ does not contain an embedded circle; see for example \cite[2.2.3]{chiswell}.
 
 Assume the contrary; let $2\cdot R$ be the infimum of lengths of embedded circles in $M$.
 Since $M$ is locally a tree, homogeneity implies that $R>0$.
