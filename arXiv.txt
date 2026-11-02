@@ -1,0 +1,12 @@
+foundations.tex
+library.bib
+mppics/pic-100.mps
+mppics/pic-20.mps
+mppics/pic-30.mps
+mppics/pic-40.mps
+mppics/pic-50.mps
+mppics/pic-60.mps
+mppics/pic-70.mps
+mppics/pic-80.mps
+mppics/pic-90.mps
+paper-en.sty
