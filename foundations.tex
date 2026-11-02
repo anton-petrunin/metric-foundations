@@ -57,19 +57,20 @@ a metric space is called \emph{$n$-point-homogeneous} if any isometry between it
 This result follows from a theorem of Jacques Tits \cite{tits} about 2-point-homogeneous spaces;
 under additional geometric assumptions, the 3-point-homogeneity statement was proved earlier by Herbert Busemann \cite[V §9]{busemann}.
 
+Our only tools are symmetries, almost geodesics, and repeated applications of the triangle inequality.
 As in many classification problems, we must first prove a few curious facts about the hypothetical extra examples, only to discover that they form the empty set.
 
 The theorem is reduced to the following statements:
 \begin{enumerate}[(a)]
-\item Any all-set-homogeneous length space is complete; see \ref{prop:complete}.
-\item Any complete all-set-homogeneous length space is geodesic; see \ref{prop:ash>geodesic}.
-\item Any all-set-homogeneous geodesic space has locally unique geodesics; see \ref{prop:unique-geod}.
+\item All-set-homogeneous length spaces are complete; see~\ref{prop:complete}.
+\item Complete all-set-homogeneous length spaces are geodesic; see~\ref{prop:ash>geodesic}.
+\item All-set-homogeneous geodesic spaces have locally unique geodesics; see~\ref{prop:unique-geod}.
 \item Any all-set-homogeneous geodesic space with locally unique geodesics is a universal tree of finite valence or a classical space; see \ref{thm:tree}.
 \end{enumerate}
 These steps can be read independently; if the reader is interested only in uniquely geodesic spaces, then it is sufficient to read only the last pages of Section~\ref{Locally unique geodesics}.
 
-The final section discusses an alternative approach to the proof, extensions beyond length spaces, and related questions.
-It can be read independently of the proof of the main theorem.
+The final section discusses an alternative approach to the proof and extensions beyond length spaces.
+It can be read independently of the rest.
 
 \section{Preliminaries}
 
@@ -86,7 +87,8 @@ If any point $p\in M$ admits a neighborhood $U$ such that the geodesic $[xy]$ is
 then $M$ has \emph{locally unique geodesics}.
 If $[px]\subset [py]$ or $[px]\supset [py]$ whenever $[px]\cap [py]$ contains a nontrivial geodesic, then we say that geodesics in $M$ are \emph{nonbifurcating}.
 
-A \emph{sphere} and a \emph{ball} with center $p$ and radius $r>0$ in a metric space $M$ are defined as
+Interior and closure in a metric space $M$ will be denoted by $\Int_M$ and $\Cl_M$, respectively.
+A \emph{sphere}, an \emph{open ball}, and a \emph{closed ball} with center $p$ and radius $r>0$ in a metric space $M$ are defined as
 \begin{align*}
 \Sph(p,r)=\Sph(p,r)_M&=\set{x\in M}{|p-x|=r},
 \\
@@ -142,7 +144,8 @@ Then $f(x)\in \Sigma_n$ for every $n$.
 Assume an all-set-homogeneous metric space $X$ contains a nontrivial rectifiable curve. Then the following holds.
 \begin{enumerate}[(i)]
 \item There is $\eps>0$ such that any two connected components of $X$ lie $\eps$-apart from each other.
-\item Assume that a connected component $Y$ of $X$, equipped with the length metric $|\ \z-\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$. Then $Y$ is an all-set-homogeneous length space; moreover, there is a strictly increasing continuous function $\psi_X$ such that $\psi_X(0)=0$ and
+\item Let $Y$ be a connected component of $X$; equip it with with the length metric $|\ \z-\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$.
+Then $Y$ is an all-set-homogeneous length space; moreover, there is a strictly increasing continuous function $\psi_X$ such that $\psi_X(0)=0$ and
 \[|x-y|_Y=\psi_X(|x-y|_X)\]
 for any $x,y\in Y$.
 \end{enumerate}
@@ -154,12 +157,12 @@ We can assume that the curve is compact; let $\eps>0$ be its diameter.
 
 \parit{(i)} If $x$ and $y$ lie in different connected components of $X$, then $|x-y|_X>\eps$.
 
-\parit{(ii)}  If two points $x$ and $y$ lie in one connected component of $X$,
-then they can be connected by a chain of points $x=x_0,x_1,\ldots,x_n=y$ such that $|x_i-x_{i+1}|\leqslant\eps$ for every $i$.
+\parit{(ii)}  If $x,y\in Y$,
+then there is a chain of points $x=x_0,x_1,\ldots,x_n=y$ such that $|x_i-x_{i+1}|\leqslant\eps$ for every $i$.
 In this case, $x_i$ can be connected to $x_{i+1}$ by a rectifiable curve;
 thus the same can be done for $x$ and $y$.
+In particular, $|x-y|_Y<\infty$.
 
-In particular, $|x-y|_Y<\infty$ for any $x,y\in Y$.
 It remains to apply all-set-homogeneity of $X$.
 \qeds
 
@@ -189,8 +192,8 @@ if any nontrivial geodesic in $M$ can be extended to a local geodesic defined on
 Any all-set-homogeneous geodesic space $M$ is geodesically complete.
 \end{thm}
 
-In fact 2-point-homogenuity is sufficient, but we will not need it.
-Once we prove the main theorem, we will get that \textit{every $(\diam M)$-long local geodesic in an all-set-homogeneous geodesic space $M$ is a geodesic}.
+%2-point-homogenuity is not sufficient.
+The main theorem (once it is proved) will imply a stronger statement: \textit{every $(\diam M)$-long local geodesic in an all-set-homogeneous geodesic space $M$ is a geodesic}.
 
 \parit{Proof.}
 Choose a nontrivial geodesic $\gamma$ in $M$;
@@ -221,7 +224,7 @@ Since $T$ is a tree,
 \[2\cdot t\leqslant|x_0-x_i|+|x_0-x_j|-|x_i-x_j|
 \quad\Rightarrow\quad
 \gamma_i(t)=\gamma_j(t).\]
-Therefore the sequence $\gamma_n(t)$ stabilizes for any for any $0\leqslant t<\ell$.
+Therefore the sequence $\gamma_n(t)$ stabilizes for any $0\leqslant t<\ell$.
 Defining $\gamma_\infty(t)$ as $\gamma_n(t)$ for sufficiently large $n$ produces a geodesic $\gamma_\infty \colon[0,\ell)\to T$.
 Since $T$ is geodesically complete, $\gamma_\infty$ extends to $[0,\ell]$, and then $x_0,x_1,\ldots$ converge to $\gamma_\infty(\ell)$ --- a contradiction.
 \qeds
@@ -340,7 +343,7 @@ The following observation is a version of Birkhoff's reflection construction
 \cite[Theorem 20]{birkhoff}.
 
 \begin{thm}{Observation}\label{lem:reflection}
-Let $M$ be an all-set-homogeneous length space and $u,v\z\in M$ be distinct.
+Let $M$ be an all-set-homogeneous length space, and let $u,v\z\in M$ be distinct.
 Then there is an involutive isometry $\rho$ that fixes $\Bis(u,v)$ pointwise and swaps $u$ with $v$.
 Moreover,
 \[\tfrac12\cdot |x-\rho(x)|=\inf\set{|x-o|}{o\in \Bis(u,v)}\]
@@ -402,7 +405,7 @@ Any all-set-homogeneous length space with a thick mirror has local cut points.
 
 \parit{Proof.}
 Let $\Bis_\rho$ be a thick mirror in an all-set-homogeneous length space $M$.
-Choose a connected component $W\subset\Int(\Bis_\rho)$ and a path $\gamma\colon[0,1]\to M$
+Choose a connected component $W\subset\Int_M(\Bis_\rho)$ and a path $\gamma\colon[0,1]\to M$
 such that $\gamma(t)\in W$ for any $t<1$ and $\gamma(1)\in\partial W$.
 Let $p=\gamma(0)$, $q=\gamma(1)$, and $s=|p-q|$.
 
@@ -494,8 +497,7 @@ For any triple of points $p,q_1,q_2\in M$ there is a point $x\in \vv pq_1\ww\cap
 \end{thm}
 
 \parit{Proof.}
-Let
-\[r\df\sup\set{|p-x|}{x\in \vv pq_1\ww\cap \vv pq_2\ww}.\]
+Let $r\df\sup\set{|p-x|}{x\in \vv pq_1\ww\cap \vv pq_2\ww}$.
 
 Choose a sequence $x_1,x_2,\ldots\in \vv pq_1\ww\cap \vv pq_2\ww$ so that $r_n\df|p-x_n|$ is an increasing sequence converging to $r$.
 
@@ -512,8 +514,8 @@ By \ref{obs:geodesically-complete}, the nested union of geodesics in \ref{one-st
 
 \subsection*{Splitting function}
 
-Consider three distinct points $p$, $q_1$, and $q_2$ in an all-set-homogeneous geodesic space~$M$.
-Let $x$ be a splitting point provided by \ref{lem:split-time}.
+Consider three distinct points $p$, $q_1$, and $q_2$ in an all-set-homogeneous geodesic space~$M$;
+let $x$ be a splitting point provided by \ref{lem:split-time}.
 If $|p-q_1|\z=|p-q_2|$ and $x\ne p$, then a triple of geodesics $[xq_1]$, $[xq_2]$, and $[xp]$ will be called a \emph{fork}.
 Note that the unions $[xp]\cup [xq_1]$ and $[xp]\cup [xq_2]$ form geodesics $[pq_1]$ and $[pq_2]$.
 Let $\gamma_0$, $\gamma_1$, and $\gamma_2$ be the arc-length parametrizations of $[xp]$, $[xq_1]$, and $[xq_2]$ starting from~$x$;
@@ -634,7 +636,7 @@ Repeating the construction above, we get an $r'$-rhombus for any $r'\in(0,r]$.
 \begin{thm}{Lemma}
 Let $M$ be an all-set-homogeneous geodesic space with locally nonunique geodesics.
 Suppose $r>0$ is sufficiently small.
-Then there are $p,q\in M$ and an infinite sequence
+Then there are $p,q\z\in M$ and an infinite sequence
 $x_1,x_2,\ldots\in M$ such that
 \[|p-q|=2\cdot r,
 \quad
@@ -756,7 +758,7 @@ Suppose there are two distinct commuting reflections $\rho$ and $\sigma$ of $M$ 
 Then there are arbitrarily small radii $r>0$ such that a sphere $\Sph(o,r)$ in $M$ contains a nontrivial rectifiable curve.
 \end{thm}
 
-The proof is elementary, but delicate: one false step can send us over the edge.
+The proof is elementary, but delicate: one false step sends us over the edge.
 The following three statements will follow from the main theorem, but only after it is proved.
 Therefore they cannot be assumed; keep this in mind while reading further.
 \begin{enumerate}[(i)]
@@ -962,8 +964,7 @@ The mirror $\Bis_{\eta_\infty}$ meets every closed curve $\beta_n$:
 indeed, $\beta_n$ is $\theta_1$-invariant,
 and $\theta_1$ interchanges the sides of $\Bis_{\eta_\infty}$.
 Choose $z_n\in\beta_n\cap\Bis_{\eta_\infty}$.
-Since $\beta_n$ converge to the closed curve $\beta_\infty$, a subsequence of $z_n$ converges to a point $z_\infty$ in $\beta_\infty\cap\Cl_{\bar M}\Bis_{\eta_\infty}$;
-here $\Cl_{\bar M}$ denotes closure in $\bar M$.
+Since $\beta_n$ converge to the closed curve $\beta_\infty$, a subsequence of $z_n$ converges to a point $z_\infty$ in $\beta_\infty\cap\Cl_{\bar M}\Bis_{\eta_\infty}$.
 Thus $\eta_\infty(z_\infty)=z_\infty$; recall that each isometry of $M$ is identified with its extension to $\bar M$.
 
 By \ref{lem:cont-on-mirror}, we have convergence $\eta_j\to\eta_\infty$ on $\Bis_{\eta_\infty}$,
@@ -998,7 +999,7 @@ Since $t_\infty$ was arbitrary, $\beta_\infty$ lies in $M$.
 
 Thus $\beta_\infty$ is a rectifiable curve in $M$,
 which is not constant since $p_\infty\ne \theta_1(p_\infty)$.
-Since the $D_{\mathrm{dyad}}$-action fixes $A$ pointwise, the curve lies in a sphere centered at any point $o\in A$.
+Since the $D_{\mathrm{dyad}}$-action fixes $A$ pointwise and has a dense orbit in $\beta_\infty$, the curve lies in a sphere centered at any point $o\in A$.
 Furthermore, the radius of the sphere is $r=|o-p_\infty|\z=|o-\alpha_1(t)|$ for some $t$;
 in particular, $r$ can be taken arbitrarily small.
 \qeds
@@ -1232,7 +1233,7 @@ Then the map $f$ can be extended to a distance-preserving map on $X\cup\{t_i'\}$
 \end{thm}
 
 \parit{Proof.}
-Set $x_i=f(t_i)$ and let $f(t_i')\df x_i'\df\rho(x_i)$, where $\rho$ is the reflection that swaps $x_{i-1}$ and $x_{i+1}$.
+Set $x_i=f(t_i)$ and let $f(t_i')\df x_i'\df\rho(x_i)$, where $\rho$ is a reflection that swaps $x_{i-1}$ and $x_{i+1}$.
 We can assume $|x_{i-1}-x_i|\geqslant |x_i-x_{i+1}|$.
 Then
 \[|x_{i-1}-x'_i|+|x'_i-x_i|+|x_i-x_{i+1}|=|x_{i-1}-x_{i+1}|;\]
@@ -1283,7 +1284,7 @@ We chose the present organization to make the geodesic case more accessible and 
 \begin{thm}{Enlargement lemma}
 Let $M$ be an all-set-homogeneous length space with thin mirrors.
 Let $\rho_1,\ldots,\rho_n$ be distinct pairwise commuting reflections,
-and put $H_i=\Bis_{\rho_i}$.
+and $H_i=\Bis_{\rho_i}$.
 Suppose distinct points $x,y\in H_2\cap\cdots\cap H_n$
 lie on the same side and at the same distance from $H_1$.
 Then $M$ admits $n+1$ distinct pairwise commuting reflections.
@@ -1313,7 +1314,7 @@ $\sigma$, $\tau$, $\rho_2,\ldots,\rho_n$.
 \qeds
 
 
-The next natural step would be classification of connected all-set-homogeneous spaces.
+Classification of connected all-set-homogeneous spaces is the next natural step.
 Such spaces appear if one modifies the metric on an all-set-homogeneous length space by a function.
 Namely, let $M$ be a length space, set $L=\diam M$.
 Suppose $\varphi\colon[0,L]\to[0,D]$ is a continuous strictly increasing subadditive function such that $\varphi(0)=0$; \emph{subadditive} means $\varphi(a+b)\le \varphi(a)+\varphi(b)$ if both sides are defined.
@@ -1321,7 +1322,7 @@ Note that the function $(x,y)\mapsto \varphi(|x-y|)$ defines another metric on $
 let us denote by $M^\varphi$ the obtained metric space.
 If $M$ is an all-set-homogeneous length space, then $M^\varphi$ is a connected all-set-homogeneous space.
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:path-connected}
 Any complete path-connected all-set-homogeneous space is isometric to $M^\varphi$, where $M$ is a universal metric tree of finite valence or a classical space and $\varphi\colon[0,\diam M]\to [0,D]$ is a continuous strictly increasing subadditive function such that $\varphi(0)=0$.
 \end{thm}
 
@@ -1329,9 +1330,9 @@ Any complete path-connected all-set-homogeneous space is isometric to $M^\varphi
 Does the same hold for every connected all-set-homogeneous space?
 \end{thm}
 
-The proof follows the idea of Jacques Tits \cite[§ 3]{tits}.
+The proof of the proposition follows the idea of Jacques Tits \cite[IV.E § 3]{tits}.
 
-\parit{Proof.}
+\parit{Proof of \ref{prop:path-connected}.}
 We will show that any complete path-connected all-set-homogeneous space $X$ is isometric to $M^\varphi$, where $M$ is a length space and $\varphi$ is a strictly increasing function such that $\varphi(0)=0$.
 Once this is done, then the main theorem finishes the proof.
 
@@ -1345,7 +1346,7 @@ Let $D=\diam X$.
 Note that there is an operation $\oplus$ on $[0,D]$ such that
 \[\bar\Ball(p,r\oplus s)=\Cl_X\left(\bigcup_{q\in \bar\Ball(p,r)}\bar\Ball(q,s)\right);\]
 in particular, the set on the right hand side is a ball.
-Furthermore, observe that $\oplus$ is symmetric, associative, continuous, and $0<r<D$ $\Rightarrow$ $r<r\oplus r$.
+Observe that $\oplus$ is symmetric, associative, continuous, and $0<r<D$ $\Rightarrow$ $r<r\oplus r$.
 By the linearization theorem \cite[(3.3)]{ling1965},
 \[\varphi^{-1}(r\oplus s)=\min\{\,\varphi^{-1}(r)+\varphi^{-1}(s),L\,\}\]
 for some increasing continuous subadditive function $\varphi\colon[0,L]\to [0,D]$.%
@@ -1362,7 +1363,7 @@ Note that $M$ has almost midpoints; by Menger's lemma it is a length space.
 
 By Tits' theorem quoted in the introduction \cite{tits}, a locally compact geodesic 3-point-homogeneous space is classical; in particular it is  \emph{finite-set-homogeneous}; that is, it is $m$-point-homogeneous for every positive integer $m$.
 
-The class of complete finite-set-homogeneous geodesic spaces is much richer.
+The class of complete finite-set-homogeneous geodesic spaces is quite rich.
 It includes infinite-dimensional analogs of classical spaces, as well as universal metric trees of infinite valence.
 Another class of examples comes from metric Fraïssé limits;
 in particular, Urysohn universal spaces (unbounded and bounded).
@@ -1381,7 +1382,7 @@ For general metric spaces, a negative answer was found by Manfred Droste and Dug
 
 \parbf{Acknowledgements.}
 We thank Marcos Cossarini, James E. Hanson, Sergei Ivanov, Linus Kramer, and Alexander Lytchak for helpful discussions, both in person and on MathOverflow.
-The proof was developed in collaboration with AI (GPT-6 Astra).
+The proofs were developed in collaboration with AI (GPT-6 Astra).
 
 {\sloppy
 \def\emph{\textit}
