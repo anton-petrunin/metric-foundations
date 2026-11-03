@@ -57,7 +57,7 @@ a metric space is called \emph{$n$-point-homogeneous} if any isometry between it
 This result follows from a theorem of Jacques Tits \cite{tits} about 2-point-homogeneous spaces;
 under additional geometric assumptions, the 3-point-homogeneity statement was proved earlier by Herbert Busemann \cite[V §9]{busemann}.
 
-Our only tools are symmetries, almost geodesics, and repeated applications of the triangle inequality.
+Our only tools are symmetries, almost shortest paths, and repeated applications of the triangle inequality.
 As in many classification problems, we must first prove a few curious facts about the hypothetical extra examples, only to discover that they form the empty set.
 
 The theorem is reduced to the following statements:
@@ -144,7 +144,7 @@ Then $f(x)\in \Sigma_n$ for every $n$.
 Assume an all-set-homogeneous metric space $X$ contains a nontrivial rectifiable curve. Then the following holds.
 \begin{enumerate}[(i)]
 \item There is $\eps>0$ such that any two connected components of $X$ lie $\eps$-apart from each other.
-\item Let $Y$ be a connected component of $X$; equip it with with the length metric $|\ \z-\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$.
+\item Let $Y$ be a connected component of $X$; equip it with the length metric $|\ \z-\ |_Y$ induced by the metric $|\ -\ |_X$ on $X$.
 Then $Y$ is an all-set-homogeneous length space; moreover, there is a strictly increasing continuous function $\psi_X$ such that $\psi_X(0)=0$ and
 \[|x-y|_Y=\psi_X(|x-y|_X)\]
 for any $x,y\in Y$.
@@ -192,8 +192,10 @@ if any nontrivial geodesic in $M$ can be extended to a local geodesic defined on
 Any all-set-homogeneous geodesic space $M$ is geodesically complete.
 \end{thm}
 
-%2-point-homogenuity is not sufficient.
+There are 2-point-homogeneous metric trees of any valence $n\geqslant 3$ that are not complete and not geodesically complete in the above sense, and hence 2-point-homogeneity is not sufficient.
+These examples were constructed by Pénélope Azuelos~\cite{azuelos2025}, and they have the following weaker property: any geodesic defined on a closed interval can be extended to a geodesic defined on the whole real line.
 The main theorem (once it is proved) will imply a stronger statement: \textit{every $(\diam M)$-long local geodesic in an all-set-homogeneous geodesic space $M$ is a geodesic}.
+
 
 \parit{Proof.}
 Choose a nontrivial geodesic $\gamma$ in $M$;
@@ -265,9 +267,7 @@ which is not a tripod --- a contradiction.
 
 Thus $M$ is an all-set-homogeneous metric tree;
 in particular, it has the same valence at every point.
-By \ref{obs:geodesically-complete} and \ref{clm:complete}, $M$ is complete.%
-\footnote{Pénélope Azuelos has shown that homogeneity is not sufficient \cite{azuelos2025}:
-\textit{there are noncomplete 2-point-homogeneous metric trees  of any valence $n\geqslant 3$}.}
+By \ref{obs:geodesically-complete} and \ref{clm:complete}, $M$ is complete.
 Thus $M$ is a universal metric tree;
 it remains to show that it has finite valence.
 
@@ -620,7 +620,7 @@ Therefore, $|q_1-q_2|=s(r)$ for some $r\ll R$.
 Let $p_i$ be the point provided by \ref{lem:split-time} for $w_i$, $q_1$ and $q_2$.
 Note that $p_1$, $p_2$, $q_1$, $q_2$ form an $r$-rhombus.
 
-\begin{figure}[h!]
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-30}
@@ -644,6 +644,12 @@ $x_1,x_2,\ldots\in M$ such that
 \quad\text{and}\quad
 |x_i-x_j|=s(r)\] for $ i\ne j$.
 \end{thm}
+
+\begin{figure}[h!]
+\centering\vskip-0mm
+\includegraphics{mppics/pic-40}
+\vskip-0mm
+\end{figure}
 
 \parit{Proof.}
 In the proof we construct and use the configuration of points shown in the picture.
@@ -672,12 +678,6 @@ for any $i$.
 Therefore, there is an isometry $\iota'$ that fixes $p,x_1,\ldots,x_n$ and moves $w$ to $q$.
 Note that the point $x_{n+1}=\iota'(y)$ meets all the requirements.
 \qeds
-
-\begin{figure}[t!]
-\centering\vskip-0mm
-\includegraphics{mppics/pic-40}
-\vskip-0mm
-\end{figure}
 
 \begin{thm}{Proposition}\label{prop:unique-geod}
 All-set-homogeneous geodesic spaces have locally unique geodesics.
@@ -786,12 +786,6 @@ By \ref{lem:bisector}, $M\setminus A$ is path-connected.
 Indeed, both path-connected components of $M\setminus \Bis_\rho$ intersect both path-connected components of $M\setminus \Bis_\sigma$.
 Thus we can choose a rectifiable path $\alpha_1$ in $M\setminus A$ from $\Bis_\rho$ to $\Bis_{\sigma}$.
 
-\begin{figure}[b!]
-\centering\vskip-0mm
-\includegraphics{mppics/pic-90}
-\vskip-0mm
-\end{figure}
-
 Moreover, given $o\in A$ we can assume that $\alpha_1$ lies arbitrarily close to $o$.
 Indeed, choose a point $x\notin \Bis_\rho\cup \Bis_{\sigma}$ sufficiently close to $o$.
 Connect $\rho(x)$ to $x$ and $x$ to $\sigma(x)$ by almost shortest paths;
@@ -809,6 +803,12 @@ such that $\alpha_n$ runs from $\Bis_\rho$ to $\Bis_{\tau_n}$,
 2\cdot \length \alpha_{n+1}\leqslant \length \alpha_{n}
 \eqlbl{eq:sigma-n-rho}\]
 for each $n$.
+
+\begin{figure}[ht!]
+\centering\vskip-0mm
+\includegraphics{mppics/pic-90}
+\vskip-0mm
+\end{figure}
 
 Suppose $\tau_n$ and $\alpha_n$ are constructed.
 By the intermediate value theorem there is a point $x\in \alpha_n$ such that $|x-\rho(x)|=|x-\tau_n(x)|$.
@@ -1048,7 +1048,7 @@ Consider the set $\Lambda_{a,c}$ of all $\lambda\geqslant 0$
 such that $a=|u-v|$, $c=|u-w|$, and $b+\lambda=|v-w|$ for some points $u,v,w\in M$;
 further assume $\Lambda_{a,c}\ne\varnothing$.
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 \centering\vskip-0mm
 \includegraphics{mppics/pic-70}
 \vskip-0mm
@@ -1181,12 +1181,7 @@ Then choose $y,z\in \Sph(u,a)$ such that
 for each $i$, and $|y-z|$ is almost $h(b)$.
 Since $\Theta$ is a metric, we may choose $x=x_i$ that meets the conditions in \ref{eq:lambda-eps}.
 
-\begin{wrapfigure}{o}{40mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-80}
-\vskip-0mm
-\end{wrapfigure}
+
 
 Choose an almost shortest path $\gamma$ from $w$ to $x$, so its length is sufficiently close to
 $|w-x|=b+\lambda(x)$.
@@ -1198,6 +1193,12 @@ In particular, we have
 |x-w'|<b'+2\cdot\lambda(x).
 \]
 
+\begin{wrapfigure}{o}{40mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-80}
+\vskip-0mm
+\end{wrapfigure}
 
 Let $\rho$ be a reflection swapping $x$ with $y$;
 note that $\rho(u)=u$.
