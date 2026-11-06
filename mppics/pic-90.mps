@@ -2,14 +2,14 @@
 %%BoundingBox: -44 -44 199 120 
 %%HiResBoundingBox: -43.6536 -43.6536 198.4243 119.05458 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2026.10.28:1712
+%%CreationDate: 2026.11.04:2142
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font CIVCVB-CMMI10 LNIJCJ-CMR7 MBMMBT-CMR10 TOCEMT-CMSY7 YRZNWE-CMMI7 
-%%+ font JLGHCE-CMR5
+%%+ font CIVCVB-CMMI10 LNIJCJ-CMR7 PSDWPU-CMR10 TOCEMT-CMSY7 YRZNWE-CMMI7 
+%%+ font ZODJAO-CMR5
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font CIVCVB-CMMI10 LNIJCJ-CMR7 MBMMBT-CMR10 TOCEMT-CMSY7 YRZNWE-CMMI7 
-%%+ font JLGHCE-CMR5
+%%+ font CIVCVB-CMMI10 LNIJCJ-CMR7 PSDWPU-CMR10 TOCEMT-CMSY7 YRZNWE-CMMI7 
+%%+ font ZODJAO-CMR5
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -38,7 +38,7 @@ FontDirectory/CIVCVB-CMMI10 known{/CIVCVB-CMMI10 findfont dup/UniqueID known{dup
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /CXVCLZ-CMMI10 def
+/FontName /OPRPZQ-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -533,7 +533,7 @@ CFE0D3263A4E2AA73CE01C3E2827F1FE5B6879684D02B39CCF12054875F5AF34
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font MBMMBT-CMR10
+%%BeginResource: font PSDWPU-CMR10
 %!PS-AdobeFont-1.0: CMR10 003.002
 %%Title: CMR10
 %Version: 003.002
@@ -545,7 +545,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/MBMMBT-CMR10 known{/MBMMBT-CMR10 findfont dup/UniqueID known{dup
+FontDirectory/PSDWPU-CMR10 known{/PSDWPU-CMR10 findfont dup/UniqueID known{dup
 /UniqueID get 5000793 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -1342,7 +1342,7 @@ F9D177940146A3C83B5B664FD546653E0501316E46E3D398AD21BBB18CE4ACE6
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font JLGHCE-CMR5
+%%BeginResource: font ZODJAO-CMR5
 %!PS-AdobeFont-1.0: CMR5 003.002
 %%Title: CMR5
 %Version: 003.002
@@ -1354,7 +1354,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/JLGHCE-CMR5 known{/JLGHCE-CMR5 findfont dup/UniqueID known{dup
+FontDirectory/ZODJAO-CMR5 known{/ZODJAO-CMR5 findfont dup/UniqueID known{dup
 /UniqueID get 5000788 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -1600,7 +1600,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /CXVCLZ-CMMI10 def
+ /cmmi10 /OPRPZQ-CMMI10 def
  /cmr7 /FWLNPJ-CMR7 def
  /cmr10 /BQRKYZ-CMR10 def
  /cmsy7 /TJAOWE-CMSY7 def

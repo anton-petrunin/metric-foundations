@@ -92,7 +92,7 @@ A \emph{sphere}, an \emph{open ball}, and a \emph{closed ball} with center $p$ a
 \begin{align*}
 \Sph(p,r)=\Sph(p,r)_M&=\set{x\in M}{|p-x|=r},
 \\
-\Ball(p,r)=\Ball(p,r)_M&=\set{x\in M}{|p-x|<r}
+\Ball(p,r)=\Ball(p,r)_M&=\set{x\in M}{|p-x|<r},
 \\
 \bar\Ball(p,r)=\bar\Ball(p,r)_M&=\set{x\in M}{|p-x|\leqslant  r};
 \end{align*}
@@ -382,8 +382,7 @@ Let $M$ be an all-set-homogeneous length space with thin mirrors.
 Then
 \begin{enumerate}[(i)]
 \item no mirror of $M$ properly contains another;
-\item an isometry of $M$ fixing a mirror pointwise and preserving its sides is the identity;
-\item an isometry is determined by its values on two distinct mirrors;
+\item there is precisely one nonidentity isometry of $M$ fixing a given mirror pointwise; in particular, an isometry is determined by its values on two distinct mirrors;
 \item the stabilizer of an oriented mirror acts transitively on that mirror.
 \end{enumerate}
 
@@ -396,12 +395,17 @@ Since mirrors are thin, every mirror is the common boundary of its two sides.
 For nested mirrors, their corresponding sides are also nested,
 which forces equality of the mirrors.
 
-\parit{(ii)+(iii).}
-Suppose $q=\iota(p)\ne p$ for an isometry $\iota$ of $M$ that fixes a mirror $\Bis_\rho$ pointwise.
-Then $\Bis_\rho\subset \Bis(p,q)$ and therefore equality holds; in this case, $p$ and $q$ lie on the opposite sides of $\Bis_\rho$.
-If an isometry fixes two mirrors pointwise and moves $p$ to $q\ne p$, then both mirrors coincide with $\Bis(p,q)$.
+\parit{(ii).}
+Suppose that a nonidentity isometry $\iota\ne \rho$ of $M$ fixes a mirror $\Bis_\rho$ pointwise.
+Composing $\iota$ with $\rho$ if necessary, we can assume that $\iota$ preserves the sides of $\Bis_\rho$.
+Choose $q=\iota(p)\ne p$.
+Then $\Bis_\rho\subset \Bis(p,q)$, so equality holds by (i).
+In this case, $p$ and $q$ lie on the opposite sides of $\Bis_\rho$, which is impossible.
 
-\parit{(iv).} Choose points on one side of $\Bis_\rho$ sufficiently close to distinct points $x,y\in\Bis_\rho$, join them on this side, and choose a point $z$ with $|x-z|=|y-z|$.
+\parit{(iii).}
+Choose points on one side of $\Bis_\rho$ sufficiently close to distinct points $x,y\in\Bis_\rho$, join them on this side, and choose a point $z$ with $|x-z|=|y-z|$.
+Recall that $\Bis_\rho=\Bis(z,\rho(z))$.
+
 The reflection swapping $x$ and $y$ fixes $z$ and $\rho(z)$, hence preserves their bisector and its chosen side.
 \qeds
 

@@ -2,12 +2,12 @@
 %%BoundingBox: -8 -64 51 8 
 %%HiResBoundingBox: -7.80319 -63.888 50.26978 7.32669 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2026.10.28:1712
+%%CreationDate: 2026.11.04:2142
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font CXVCLZ-CMMI10
+%%+ font OPRPZQ-CMMI10
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font CXVCLZ-CMMI10
+%%+ font OPRPZQ-CMMI10
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font CXVCLZ-CMMI10
+%%BeginResource: font OPRPZQ-CMMI10
 %!PS-AdobeFont-1.0: CMMI10 003.002
 %%Title: CMMI10
 %Version: 003.002
@@ -30,7 +30,7 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/CXVCLZ-CMMI10 known{/CXVCLZ-CMMI10 findfont dup/UniqueID known{dup
+FontDirectory/OPRPZQ-CMMI10 known{/OPRPZQ-CMMI10 findfont dup/UniqueID known{dup
 /UniqueID get 5087385 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

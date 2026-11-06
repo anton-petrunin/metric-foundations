@@ -374,8 +374,8 @@ label.lft (btex $x$ etex,z.x);
 label.llft (btex $y$ etex,z.y);
 label.lrt (btex $z$ etex,z.z+(-2,-1));
 label.lft (btex $\gamma$ etex, point 1.45 of p1);
-label.urt (btex $\S(u,c')$ etex, z.ww rotated -20);
-label.urt (btex $\S(u,a)$ etex, (0,-2)+z.z rotated -15);
+label.urt (btex $\Sph(u,c')$ etex, z.ww rotated -20);
+label.urt (btex $\Sph(u,a)$ etex, (0,-2)+z.z rotated -15);
 endfig;
 
 beginfig(90)
