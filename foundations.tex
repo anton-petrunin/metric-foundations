@@ -1,9 +1,33 @@
- \documentclass[a4paper,10pt]{article}
- \usepackage{hyperref}
+\documentclass[a4paper,10pt]{article}
+\usepackage{hyperref}
 \usepackage{paper-en}
+
+%\newcommand{\imrn}[2]{#1} %for arXiv
+\newcommand{\imrn}[2]{#2} %for IMRN
 
 \def\thetitle{Metric foundations of geometry}
 \def\theauthors{Nina Lebedeva and Anton Petrunin}
+
+\newcommand{\Addresses}{{\bigskip\footnotesize
+
+\noindent Nina Lebedeva,
+\par\nopagebreak
+ \textsc{St. Petersburg State University, 7/9 Universitetskaya nab., St. Petersburg, 199034, Russia}
+\par
+\nopagebreak
+ \textsc{St. Petersburg Department of V. A. Steklov Institute of Mathematics of the Russian Academy of Sciences, 27 Fontanka nab., St. Petersburg, 191023, Russia}
+  \par\nopagebreak
+  \textit{Email}: \texttt{lebed@pdmi.ras.ru}
+
+\medskip
+
+\noindent   Anton Petrunin (corresponding author),
+\par\nopagebreak
+ \textsc{Math. Dept. PSU, University Park, PA 16802, USA.}
+  \par\nopagebreak
+  \textit{Email}: \texttt{petrunin@math.psu.edu}
+
+}}
 
 \hypersetup{colorlinks=true,
 citecolor=black,
@@ -29,6 +53,12 @@ A metric space is called all-set-homogeneous if every isometry between two of it
 extends to an isometry of the whole space.
 We classify all-set-homogeneous length spaces: besides the classical examples, they include the universal metric trees of finite valence.
 \end{abstract}
+
+\imrn{}{\begingroup
+\renewcommand{\thefootnote}{}
+\footnotetext{Keywords: all-set-homogeneous spaces,
+length spaces, geodesic spaces, universal metric trees, foundations of geometry.}
+\endgroup}
 
 \section{Introduction}
 
@@ -620,6 +650,12 @@ Such a configuration of points will be called an \emph{$r$-rhombus}.
 \parit{Proof.}
 Suppose $0<R<\diam M$.
 
+\begin{figure}[b!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-30}
+\end{figure}
+
 Since the geodesics are not locally unique, there is a configuration of distinct points $v_1,v_2,q_1,q_2$ such that $|v_1-v_2|$ is small, $q_1,q_2\in \vv v_1v_2\ww$ and $|v_1-q_1|\z=|v_1-q_2|$ (and hence $|v_2-q_1|=|v_2-q_2|$).
 Since the space is geodesic and all-set-homogeneous, points $v_1$ and $v_2$ lie on an $R$-long geodesic $[w_1w_2]$,
 both close to its midpoint.
@@ -630,11 +666,7 @@ Therefore, $|q_1-q_2|=s(r)$ for some $r\ll R$.
 Let $p_i$ be the point provided by \ref{lem:split-time} for $w_i$, $q_1$ and $q_2$.
 Note that $p_1$, $p_2$, $q_1$, $q_2$ form an $r$-rhombus.
 
-\begin{figure}[b!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-30}
-\end{figure}
+
 
 Choose a pair of points $q'_1\in [p_1q_1]$ and $q'_2\in [p_1q_2]$ such that $|p_1-q'_1|\z=|p_1-q'_2|=r'\leqslant r$.
 By \ref{cor:splitting-function}, $|q'_1-q'_2|=s(r')$.
@@ -1299,16 +1331,16 @@ lie on the same side and at the same distance from $H_1$.
 Then $M$ admits $n+1$ distinct pairwise commuting reflections.
 \end{thm}
 
-\parit{Proof.}
-Let $\sigma$ be the reflection swapping $x$ with $y$.
-Note that $\sigma$ commutes with $\rho_2,\ldots,\rho_n$.
-
 \begin{wrapfigure}{o}{30mm}
 \centering
 \vskip-4mm
 \includegraphics{mppics/pic-100}
 \vskip-0mm
 \end{wrapfigure}
+
+\parit{Proof.}
+Let $\sigma$ be the reflection swapping $x$ with $y$.
+Note that $\sigma$ commutes with $\rho_2,\ldots,\rho_n$.
 
 Set $u=\rho_1(x)$, $v=\rho_1(y)$, and $w=\sigma(u)$.
 Note that $\rho_1$ commutes with $\sigma$ if and only if $v=w$;
@@ -1396,5 +1428,8 @@ The proofs were developed in collaboration with AI (GPT-6 Astra).
 {\sloppy
 \def\emph{\textit}
 \printbibliography[heading=bibintoc]\fussy}
+
+\imrn{}{\Addresses}
+
 \end{document}
 
